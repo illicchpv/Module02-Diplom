@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+@mixin vVal($prop, $size1, $size2, $val1, $val2){ // мой первый миксин )
+  $k: calc(($val1 - $val2) / ($size1 - $size2));
+  $v: calc($val1 - (($size1 - 100vw) * $k)); // 
+  // $glob: $v !global;
+  @if $prop == "left" {
+    left: $v;
+  } @else if $prop == "right" {
+    right: $v;
+  } @else if $prop == "top" {
+    top: $v;
+  } @else if $prop == "bottom" {
+    bottom: $v;
+  } @else if $prop == "width" {
+    width: $v;
+  } @else if $prop == "height" {
+    height: $v;
+  } @else if $prop == "font-size" {
+    font-size: $v;
+  }  @else if $prop == "margin-top" {
+    margin-top: $v;
+  }  @else if $prop == "margin-right" {
+    margin-right: $v;
+  }  @else if $prop == "margin-bottom" {
+    margin-bottom: $v;
+  }  @else if $prop == "margin-left" {
+    margin-left: $v;
+  }  @else if $prop == "padding-bottom" {
+    padding-bottom: $v;
+  }  @else if $prop == "padding-left" {
+    padding-left: $v;
+  }  @else if $prop == "padding-right" {
+    padding-right: $v;
+  }  @else if $prop == "padding-top" {
+    padding-top: $v;
+  }  @else if $prop == "min-width" {
+    min-width: $v;
+  }  @else if $prop == "min-height" {
+    min-height: $v;
+  }  @else if $prop == "flex-basis" {
+    flex-basis: $v;
+  }  @else if $prop == "gap" {
+    gap: $v;
+  }  
+}
+
+@mixin fs74b{
+  font-size: 74px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+@mixin fs28b{
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+@mixin fs28r{
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 0.009px;
+}
+@mixin fs16b{
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+@mixin fs16r{
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+@mixin fs14r{
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+html{
+  font-size: 10px;
+  // overflow-x: hidden;
+}
+body{
+  font-size: 1.6rem;
+  font-family: 'Inter', sans-serif;
+  background-color: #232326;
+  color: #F3F2F0;
+
+}
+
+@import '090temp';
