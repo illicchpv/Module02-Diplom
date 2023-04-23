@@ -86,3 +86,23 @@
   font-weight: 500;
 }
 
+// btnBlock
+.btnBlock{
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: $txtColor;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+
+  &:hover{
+    border-bottom: 1px solid rgba($txtColor, 1);
+  }
+}
+.rates .btnBlock{
+  margin-top: 75px;
+}
+

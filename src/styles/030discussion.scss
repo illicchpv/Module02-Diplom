@@ -17,24 +17,23 @@
     margin-bottom: 60px;
   }
 
-  &__btnBlock{
-    display: flex;
-    align-items: center;
-    gap: 22px;
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    color: $txtColor;
-    cursor: pointer;
-    border-bottom: 1px solid transparent;
+  // &__btnBlock{
+  //   display: flex;
+  //   align-items: center;
+  //   gap: 22px;
+  //   background-color: transparent;
+  //   border: none;
+  //   padding: 0;
+  //   color: $txtColor;
+  //   cursor: pointer;
+  //   border-bottom: 1px solid transparent;
 
-    &:hover{
-      border-bottom: 1px solid rgba($txtColor, 1);
-    }
-  }
-
-  &__btnText{
-  }
+  //   &:hover{
+  //     border-bottom: 1px solid rgba($txtColor, 1);
+  //   }
+  // }
+  // &__btnText{
+  // }
 
   // &__socials{
   //   display: flex;
@@ -60,9 +59,9 @@
   }
 }
 
-.rates .discussion__btnBlock{
-  margin-top: 75px;
-}
+// .rates .discussion__btnBlock{
+//   margin-top: 75px;
+// }
 
 
 .skill{
