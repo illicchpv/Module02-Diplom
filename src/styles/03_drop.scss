@@ -14,24 +14,24 @@ $lrPadding: 20px;
   input[type="checkbox"]{
     display:none;
     &:checked{
-      ~.drop-items{
+      ~.drop__items{
         opacity:1;
         max-height: 400px;
         padding: .6rem 0;
       }
-      ~.control{       
+      ~.drop__control{       
         z-index:99;
         // box-shadow:0 0 0 2px lighten($bgLight, 20);
         &:after{transform: rotate(180deg);}
       }
-      ~.overlay-close{
+      ~.drop__closeOverlay{
         transform: none;
         pointer-events:initial;
       }
     }
   }
   
-  .control{
+  .drop__control{
     position:relative;
     color: $txtColor; // #fff;
     // display:inline-block;
@@ -70,7 +70,7 @@ $lrPadding: 20px;
     }
   }
   
-  .drop-items{
+  .drop__items{
     position: absolute;
     //top: calc(100% + .4rem);    
     top: calc(100% + 0rem);
@@ -86,7 +86,7 @@ $lrPadding: 20px;
     opacity:0;
     z-index:99;
     
-    .item-drop{
+    .drop__item{
       list-style:none;
       a{        
         display:block;
@@ -113,7 +113,8 @@ $lrPadding: 20px;
     }
   }
 
-  .overlay-close{
+  .drop__closeOverlay{
+    // background-color: rgba(red, .3);
     position: fixed;    
     top:0;
     left:0;
@@ -124,6 +125,6 @@ $lrPadding: 20px;
     pointer-events:none;
   }
 }
-.drop .drop-items li.itemSelected a{
+.drop .drop__items li.itemSelected a{
   color: $txtColor; // !important;
 }

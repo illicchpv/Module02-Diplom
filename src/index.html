@@ -619,7 +619,7 @@
                 <!-- from https://codepen.io/robsonklein23/pen/jOYyKVV?editors=1100 -->
                 <label class="drop">
                   <input type="checkbox" id="target-drop-example"> <!-- Toggle Drop -->
-                  <span class="control" id="dropTarget">Звонок на телефон</span> <!-- Fake button -->
+                  <span class="drop__control" id="dropTarget">Звонок на телефон</span> <!-- Fake button -->
                   <script>
                     function dropSelect(el, placeholder){
                       try{
@@ -627,7 +627,7 @@
                         window.speechSynthesis.speak(speech);
                       }catch(e){console.log("speek", e)}
 
-                      let items = el.parentElement.parentElement.querySelectorAll('.item-drop');
+                      let items = el.parentElement.parentElement.querySelectorAll('.drop__item');
                       items.forEach(element => { element.classList.remove("itemSelected"); });
                       el.parentElement.classList.add('itemSelected');
                       document.getElementById('dropTarget').innerText = el.innerText;
@@ -636,15 +636,15 @@
                     }
                   </script>
                   <!-- Items -->
-                  <ul class="drop-items">
-                    <li class="item-drop itemSelected"><a href="javascript:void(0)" onclick="dropSelect(this, 'Введите телефон')"><label for="target-drop-example">Звонок на телефон</label></a></li>
-                    <li class="item-drop"><a href="javascript:void(0)" onclick="dropSelect(this, 'Введите Telegram')"><label for="target-drop-example">Telegram</label></a></li>
-                    <li class="item-drop"><a href="javascript:void(0)" onclick="dropSelect(this, 'Введите WhatsApp')"><label for="target-drop-example">WhatsApp</label></a></li>
-                    <li class="item-drop"><a href="javascript:void(0)" onclick="dropSelect(this, 'Введите Viber')"><label for="target-drop-example">Viber</label></a></li>
-                    <li class="item-drop"><a href="javascript:void(0)" onclick="dropSelect(this, 'Введите телефон')"><label for="target-drop-example">SMS сообщение</label></a></li>
+                  <ul class="drop__items">
+                    <li class="drop__item itemSelected"><a href="javascript:void(0)" onclick="dropSelect(this, 'Введите телефон')"><label for="target-drop-example">Звонок на телефон</label></a></li>
+                    <li class="drop__item"><a href="javascript:void(0)" onclick="dropSelect(this, 'Введите Telegram')"><label for="target-drop-example">Telegram</label></a></li>
+                    <li class="drop__item"><a href="javascript:void(0)" onclick="dropSelect(this, 'Введите WhatsApp')"><label for="target-drop-example">WhatsApp</label></a></li>
+                    <li class="drop__item"><a href="javascript:void(0)" onclick="dropSelect(this, 'Введите Viber')"><label for="target-drop-example">Viber</label></a></li>
+                    <li class="drop__item"><a href="javascript:void(0)" onclick="dropSelect(this, 'Введите телефон')"><label for="target-drop-example">SMS сообщение</label></a></li>
                   </ul>
                   <!-- Alternative to close dropdown with click out -->
-                  <label for="target-drop-example" class="overlay-close"></label>
+                  <label for="target-drop-example" class="drop__closeOverlay"></label>
                 </label>
               </div>
             
