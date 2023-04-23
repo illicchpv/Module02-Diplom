@@ -1,0 +1,106 @@
+// 080comunication
+.comunication{
+  margin-top: 166px;
+  margin-bottom: 130px;
+
+  &__block{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+
+  &__title{
+
+  }
+  &__decor{
+    z-index: -1;
+    position: absolute;
+    left: -126px;
+    top: -56px;
+  }
+  &__text{
+    flex-basis: calc($rpart);
+    max-width: calc($rpart);
+    position: relative;
+    box-sizing: border-box;
+    padding-right: 60px;
+    @include fs28r;
+  }
+  &__textLine{
+    @include fs28b;
+  }
+
+  &__socialBox{
+    display: flex;
+    align-items: end;
+  }
+  &__form{
+    flex-basis: calc($rpart);
+    max-width: calc($rpart);
+    position: relative;
+    box-sizing: border-box;
+    // min-height: 300px;
+    // background-color: antiquewhite;
+  }
+  &__dropLine{
+    @include fs12r;
+
+  }
+}
+
+.form{
+
+  &__label{
+    margin-top: 10px;
+    display: block;
+    @include fs12r;
+    opacity: 0.8;
+
+  }
+  &__input{
+    margin-top: 10px;
+    display: block;
+    margin-bottom: 20px;
+
+    @include fs12r;
+    background-color: $bgLight;
+    border: none;
+    color: $txtGray;
+    // font-size: 16px;
+    // border: 1px solid black; // rgba($green, .4);
+    // border-radius: 2rem;
+    // margin-bottom: 2.8rem;
+    // display: block;
+    padding: 23px 20px;
+    // margin-bottom: 2.7rem;
+    width: 100%;
+    box-sizing: border-box;
+    &:focus{
+      // border: 1px solid black; //  rgba($green, 1);
+      outline: none;
+      color: $txtColor;
+    }
+    // &:invalid{
+    //   border: 1px solid rgba(red, 1);
+    // }
+
+
+  }
+  &__type{
+    margin-top: 10px;
+
+  }
+  &__button{
+    margin-top: 40px;
+    display: block;
+    border: none;
+    background-color: $txtHover;
+    @include fs16r;
+    font-weight: 700;
+    padding: 20px;
+    width: 100%;
+
+  }
+
+}

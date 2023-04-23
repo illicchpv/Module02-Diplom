@@ -11,25 +11,48 @@ const devServer = (isDev) => !isDev ? {} : {
     }
 };
 
+const pages = ["index", "ui"];
+
 module.exports = ({ develop }) => ({
     mode: develop ? 'development' : 'production',
     devtool: 'source-map',
-    entry: './src/index.js',
+    //entry: './src/index.js',
+    entry: pages.reduce((config, page) => {
+        config[page] = `./src/${page}.js`;
+        return config;
+      }, {}),
+    
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js',
+        //filename: 'bundle.js',
+        filename: "[name].js",
         assetModuleFilename: 'images/[name][ext][query]',
         clean: true,
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: './src/index.html'
-        }),
+    // plugins: [
+    //     new HtmlWebpackPlugin({
+    //         template: './src/index.html'
+    //     }),
+    //     new MiniCssExtractPlugin({
+    //         filename: './styles/_0root.css'
+    //     }),
+    //     new CleanWebpackPlugin()
+    // ],
+    plugins: [].concat(
+        pages.map(
+          (page) =>
+            new HtmlWebpackPlugin({
+              inject: true,
+              template: `./src/${page}.html`,
+              filename: `${page}.html`,
+              chunks: [page],
+            })
+        ),
         new MiniCssExtractPlugin({
-            filename: './styles/_0root.css'
+            filename: './styles/00_root.css'
         }),
         new CleanWebpackPlugin()
-    ],
+    ),    
     module: {
         rules: [
             {

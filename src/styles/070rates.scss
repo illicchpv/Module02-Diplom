@@ -1,0 +1,118 @@
+// 070rates
+.rates{
+  margin-top: 180px;
+
+  &___decorBox{
+    position: relative;
+    z-index: 1;
+  }
+  &___decor3{
+    position: absolute;
+    z-index: -1;
+    left: -64px;
+    top: -55px;
+  }
+  &__decorO3{
+    left: -60px;
+    top: -60px;
+  }
+
+  &__titleBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    position: relative;
+    z-index: 1;    
+    margin-bottom: 80px;
+  }
+  &__title{
+    // flex-basis: 100%;
+    // width: calc(100vw/2);
+    @include fs28b;
+  }
+  &__text{
+    flex-basis: calc($rpart);
+    max-width: calc($rpart);
+    @include fs28r;
+  }
+  
+  &__itemBox{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 60px;
+
+  }
+  &__itemLeft{
+    max-width: 400px;
+  }
+  &__itemLeftTitl{
+    @include fs28r;
+    font-weight: 400;
+  }
+  &__itemLeftText{
+    margin-top: 20px;
+    @include fs16r;
+    font-weight: 500;
+    color: rgba($txtColor, 0.8);
+  }
+  &__btnBlock{
+    margin-top: 75px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    color: $txtColor;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+
+    &:hover{
+      border-bottom: 1px solid rgba($txtColor, 1);
+    }
+  }
+
+  // &__itemLeftLink{
+  //   margin-top: 75px;
+  //   @include fs16r;
+  //   font-weight: 700;
+  // }
+
+
+  &__itemRight{
+    flex-basis: calc($rpart);
+    max-width: calc($rpart);
+  }
+  &__itemRightTitl{
+    @include fs16r;
+    font-weight: 700;
+  }
+  &__itemRightTexts{
+    padding-left: 18px;
+  }
+  &__itemRightText{
+    margin-top: 10px;
+    @include fs16r;
+    color: rgba($txtColor, 0.8);
+  }
+  &___decorPriceBox{
+    position: relative;
+  }
+  &___decor4{
+    position: absolute;
+    z-index: -1;
+  }
+  &___decorO4{
+    left: -45px;
+    top: -12px;
+  }
+  &__itemRightPrice{
+    margin-top: 35px;
+    @include fs42r;
+    font-weight: 700;
+    position: relative;
+  }
+}

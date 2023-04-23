@@ -1,0 +1,80 @@
+// .decorO
+.decorO{
+  width: 108px;
+  height: 108px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+
+  &_2{
+    width: 485px;
+    height: 485px;
+  }
+  &_3{
+    width: 140px;
+    height: 140px;
+  }
+  &_4{
+    width: 90px;
+    height: 90px;
+  }
+}
+// decorV
+.decorV{
+  width: 253px;
+  height: 253px;
+  background-color: red;
+  border-radius: 50%;
+  position: relative;
+  &:after{
+    content: "";
+    position: absolute;
+    border: 30px solid transparent;
+    border-bottom: 70px solid white;
+    top: 100px;
+    left: 100px;
+    left: -19px;
+    top: 8px;
+  }
+
+  &_2{
+    width: 300px;
+    height: 300px;
+    &:after{
+      // display: none;
+      top: 21px;
+    }
+  }
+}
+
+.hline{
+  display: block;
+  width: 100%;
+  border-top: 1px solid rgba($txtColor, 1);
+  position: relative;
+}
+
+.socials{
+  display: flex;
+  gap: 28px;
+  &__social{
+    a{
+      text-decoration: none;
+      @include fs16r;
+      &:hover{
+        color: $txtHover;
+      }  
+    }
+  }
+  &_500{
+    a{
+      font-weight: 500;
+    }
+  }
+
+  &__socialSep{
+    position: relative;
+    border-left: 1px solid rgba($txtColor, 0.5); // white;
+  }
+}

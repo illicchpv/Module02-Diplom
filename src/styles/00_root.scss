@@ -45,38 +45,79 @@
   }  
 }
 
+$bg: #232326; // #232326
+$bgLight: #38383A;
+$txtColor: #F3F2F0;
+$txtHover: #D40000;
+$txtGray: rgba(243, 242, 240, 0.4);
+$debugBg: transparent; // rgba(darkgrey, .3); //
+$maxwidth: 1140px;
+$padding: 15px;
+$rpart: 560px;
+$gap4c: 10px;
+
 @mixin fs74b{
+  color: $txtColor;
   font-size: 74px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
+@mixin fs42r{
+  color: $txtColor;
+  font-size: 42px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
 @mixin fs28b{
+  color: $txtColor;
   font-size: 28px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.7px;
 }
 @mixin fs28r{
+  color: $txtColor;
   font-size: 28px;
   font-weight: 400;
   letter-spacing: 0.009px;
+  line-height: 1.5;
 }
 @mixin fs16b{
+  color: $txtColor;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 @mixin fs16r{
+  color: $txtColor;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0;
+  line-height: 1.5;
 }
 @mixin fs14r{
+  color: $txtColor;
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 0;
+  line-height: 1.5;
+}
+@mixin fs12r{
+  color: $txtColor;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5;
+}
+@mixin fs10r{
+  color: $txtColor;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5;
 }
 
 html{
@@ -86,9 +127,34 @@ html{
 body{
   font-size: 1.6rem;
   font-family: 'Inter', sans-serif;
-  background-color: #232326;
-  color: #F3F2F0;
+  background-color: $bg;
+  color: $txtColor;
 
 }
 
-@import '090temp';
+.mainBox{
+  background-color: $debugBg; 
+  min-height: 30vh;
+
+  max-width: $maxwidth;
+  margin: 0 auto;
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
+@import '01_helpers';
+@import '02_ui';
+@import '03_drop';
+@import '04_blocks';
+
+@import '010hmenu';
+@import '020introduce';
+@import '030discussion';
+@import '040about';
+@import '050portfolio';
+@import '060benefits_tools';
+@import '070rates';
+@import '080comunication';
+@import '090footer';
+
+@import '999temp';

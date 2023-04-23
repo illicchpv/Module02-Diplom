@@ -1,0 +1,29 @@
+// 090footer
+.footer {
+
+  // .footer__text
+  &__text {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 7.4rem;
+    @include fs12r;    
+    color: rgba($txtColor, 0.3);
+  }
+
+  // footer__author
+  &__author {
+    @include fs12r;
+    color: rgba($txtColor, 0.3);
+
+    a {
+      text-decoration: none;
+      color: rgba($txtColor, 0.3);
+      border-bottom: 1px solid rgba($txtColor, 0.3);
+      transition: all 0.7s;
+    }
+    &:hover a {
+      color: rgba($txtColor, 1);
+      border-bottom: 1px solid rgba($txtColor, 1);
+    }
+  }
+}

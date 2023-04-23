@@ -1,0 +1,74 @@
+// 03discussion
+.discussion{
+  margin-top: 106px;
+  position: relative;
+  padding-bottom: 10px;
+
+  &__decor{
+    position: absolute;
+    right: 38px;
+    top: -43px;
+    z-index: -1;
+  }
+
+  &__block1{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+
+  &__btnBlock{
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    color: $txtColor;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+
+    &:hover{
+      border-bottom: 1px solid rgba($txtColor, 1);
+    }
+  }
+  &__btnText{
+  }
+
+  // &__socials{
+  //   display: flex;
+  //   gap: 28px;
+  // }
+  // &__social{
+  // }
+  // &__socialSep{
+  //   position: relative;
+  //   border-left: 1px solid rgba($txtColor, 0.5); // white;
+  // }
+
+  &__decorO{
+    left: -57px;
+    top: -40px;
+  }
+
+  &__block2{
+    display: flex;
+    justify-content: space-between;
+    gap: $gap4c;
+    margin-bottom: 60px;
+  }
+}
+
+.skill{
+  flex-basis: calc(($rpart + $gap4c)/2); // 285px;
+
+  &__title{
+    margin-top: 60px;
+    @include fs16b;
+    margin-bottom: 15px;
+  }
+  &__text{
+    opacity: 0.8;
+    @include fs14r;
+  }
+}

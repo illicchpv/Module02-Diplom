@@ -1,0 +1,43 @@
+.ddbox{
+  padding: 50px 30px;
+  width: 400px;
+  background-color: $bg; // aliceblue;
+  color: $txtColor; // black;
+}
+
+.fs74b{
+  margin-top: 0px;
+  @include fs74b;
+}
+.fs28b{
+  margin-top: 37px;
+  @include fs28b;
+}
+.fs28r{
+  margin-top: 28px;
+  @include fs28r;
+}
+.fs16b{
+  margin-top: 30px;
+  @include fs16b;
+}
+.fs16r{
+  margin-top: 26px;
+  @include fs16r;
+}
+.fs14r{
+  margin-top: 27px;
+  @include fs14r;
+}
+
+.box1{
+  display: inline-block;
+  margin-left: 50px;
+  // min-width: 400px;
+
+  &__in{
+    position: relative!important;
+  }
+}
+
+

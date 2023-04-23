@@ -1,0 +1,71 @@
+// 050portfolio
+.bg2Box{
+  // background-color: red;
+  background-image: url(../images/bg2.svg);
+  background-size: cover;
+  background-position-y: 217px;
+
+  position: relative;
+  z-index: 5;  
+  // z-index: -1;
+  // position: relative;
+}
+.portfolio{
+  margin-top: 180px;
+  min-height: 300px;
+  position: relative;
+  // z-index: 10;
+
+  &__title{
+    @include fs74b;
+    position: relative;
+    margin-bottom: 220px;
+  }
+  &__decorO2{
+    top: -104px;
+    left: 362px;
+  }
+  &__decor2{
+    position: absolute;
+    top: -89px;
+    left: 353px;
+    // z-index: -1;
+  }
+  &__projects{
+    position: relative;
+  }
+  &__project{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  &__pojName{
+    @include fs28r;
+    font-weight: 700;
+    margin-bottom: 10px;
+
+  }
+  &__pojStep{
+    margin-top: 25px;
+    @include fs16r;
+  }
+  &__pojTime{
+    margin-top: 40px;
+    @include fs16r;
+    font-weight: 700;
+  }
+  &__pojScreen{
+    flex-basis: calc($rpart);
+    max-width: calc($rpart);
+
+  }
+
+  &__otherActivities{
+    margin-top: 180px;
+    max-width: 80%;
+    @include fs28r;
+    margin-bottom: 80px;
+  }
+}

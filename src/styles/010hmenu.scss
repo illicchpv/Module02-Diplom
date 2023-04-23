@@ -1,0 +1,35 @@
+// 01hmenu
+.hmenu {
+  padding-top: 43px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  // background-color: red;
+  padding-bottom: 60px;
+  &_footer{
+    padding-top: 61px;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    &_2{
+      gap: 14px;
+    }
+  }
+  &__menuItem {
+    & a{
+      @include fs14r;
+      text-decoration: none;
+
+      &:hover{
+        color: $txtHover;
+      }
+    }
+  }
+  &__menuSep{
+    opacity: 0.5;
+    border-left: 1px solid; // white;
+  }
+}

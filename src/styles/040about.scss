@@ -1,0 +1,80 @@
+// 04about
+.about{
+  margin-top: 172px;
+  // margin-bottom: 100px;
+
+  &__block1{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 55px;
+  }
+  &__title{
+    // flex-basis: 100%;
+    // width: calc(100vw/2);
+    @include fs28b;
+  }
+  &__text{
+    // flex-basis: 560px;
+    max-width: $rpart;
+    flex-shrink: 1;
+    @include fs28r;
+  }
+
+  // -----------------------
+  &__block2{
+    margin-top: 60px;
+    margin-bottom: 120px;
+  }
+  &__block2line{
+    display: flex;
+    justify-content: space-between;
+    gap: $gap4c;
+    margin-bottom: 60px;
+  }
+  &__props{
+    flex-basis: calc($rpart);
+    max-width: calc($rpart);
+
+    display: flex;
+    justify-content: space-between;
+    gap: $gap4c;
+  }
+  &__prop{
+    // flex-basis: calc(($rpart + $gap4c)/2);
+  }
+  &__propTitle{
+    @include fs16r;
+    font-weight: 700;
+  }
+  &__propText{
+    margin-top: 20px;
+    @include fs14r;
+  }
+
+}
+
+.step{
+
+  &__row{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  &__name{
+    @include fs28r;
+  }
+  &__nom{
+    display: inline-block;
+    // margin-right: 100px;
+    width: 150px;
+  }
+  &__text{
+    @include fs16r;
+    flex-basis: calc($rpart);
+    max-width: calc($rpart);
+  }
+
+}

@@ -1,0 +1,22 @@
+// 02introduce
+.introduce{
+
+  &__text{
+    position: relative;
+
+  }
+  &__decor{
+    z-index: -1;
+    position: absolute;
+    left: -126px;
+    top: -56px;
+  }
+  &__fio{
+    margin-top: 120px;
+    @include fs28r;
+  }
+  &__prof{
+    margin-top: 40px;
+    @include fs74b;
+  }
+}
