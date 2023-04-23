@@ -84,6 +84,14 @@ $gap4c: 10px;
   letter-spacing: 0.009px;
   line-height: 1.5;
 }
+@mixin fs22b{
+  color: $txtColor;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.009px;
+  line-height: 1.5;
+}
 @mixin fs16b{
   color: $txtColor;
   font-size: 16px;

@@ -6,6 +6,7 @@ $lrPadding: 20px;
 
 
 .drop{
+  
   display:inline-block;
   position: relative;
   // text-align: center;
@@ -114,7 +115,7 @@ $lrPadding: 20px;
   }
 
   .drop__closeOverlay{
-    // background-color: rgba(red, .3);
+    background-color: rgba(red, .3);
     position: fixed;    
     top:0;
     left:0;
@@ -127,4 +128,85 @@ $lrPadding: 20px;
 }
 .drop .drop__items li.itemSelected a{
   color: $txtColor; // !important;
+}
+
+
+// --------------------------------
+// .puMenu{
+// }
+// .puMenu__closeOverlay{
+//   // background-color: rgba(red, .3);
+//   position: fixed;    
+//   top:0;
+//   left:0;
+//   bottom:0;
+//   right:0;
+//   z-index:9;
+//   transform: translate(100%,0);
+//   pointer-events:none;
+// }
+
+.modal{
+  max-width: 600px;
+  min-height: 570px;
+  background-color: rgba($bg, 1);
+
+  margin: 35px auto 0;
+  position: fixed;
+  top: -2400px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  transition: top 0.3s;
+
+  &__box{
+    position: relative;
+  }
+  &__open{
+    margin-bottom: 20px;
+  }
+  &__content{
+    padding: 20px;
+    position: relative;
+  }
+  &__close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  &__title{
+    margin-top: 35px;
+    @include fs22b;
+    text-align: center;
+  }
+  &__subTitle{
+    margin: 25px auto;
+    @include fs16r;
+    text-align: center;
+    max-width: 370px;
+    margin-bottom: 30px;
+  }
+  &__formContainer{
+
+  }
+
+
+  &__shadow{
+    display: none;
+    background-color:rgba(black, .5);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 90;
+  }
+  &__noScroll{
+    overflow-y: hidden;
+  }
 }

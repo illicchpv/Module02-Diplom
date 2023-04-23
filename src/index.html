@@ -13,9 +13,61 @@
 
   -->
 
-  <div class="helper01" style="display:none;">
+  <div class="helper01" style="display:-none;">
     <a href="ui.html" target="_blank">ui.</a>
   </div>
+
+
+  <button class="modal__open"  onclick="openModal()">openModal</button>
+  <div class="modal__box">
+    <div class="modal" id="modal">
+      <div class="modal__content">
+        <img class="modal__close"  src="./images/close.svg" alt="close" onclick="closeModal()">
+        <div class="modal__title">Расскажите о своем проекте</div>
+        <div class="modal__subTitle">
+          Заполните все поля, и я свяжусь с вами
+          в ближайшее время
+        </div>
+        <div class="hline"></div>
+        <div class="modal__formContainer" data-copyContent=".comunication__form">
+
+        </div>
+      </div>
+    </div>
+    <div class="modal__shadow" id="modal-shadow" onclick="closeModal()">
+    </div>
+    <script>
+      function openModal() {
+        // disableScroll()
+        //let w = window.innerWidth - document.documentElement.clientWidth; // window.innerWidth - document.body.offsetWidth;
+        document.body.style.marginLeft  = -(window.innerWidth - document.documentElement.clientWidth) + "px";
+        document.body.parentElement.classList.add("modal__noScroll");
+        document.getElementById("modal").style.top = "0px";
+        document.getElementById("modal-shadow").style.display = "block";
+      }
+      function closeModal() {
+        // enableScroll()
+        document.body.style.marginLeft = "";
+        document.body.parentElement.classList.remove("modal__noScroll");
+        document.getElementById("modal").style.top = "-2400px";
+        document.getElementById("modal-shadow").style.display = "none";
+      }
+      // function disableScroll() {
+      //   // Get the current page scroll position
+      //   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      //   let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+      //   // if any scroll is attempted, set this to the previous value
+      //   window.onscroll = function() {
+      //       window.scrollTo(scrollLeft, scrollTop);
+      //   };
+      // }
+      // function enableScroll() {
+      //     window.onscroll = function() {};
+      // }      
+    </script>
+  </div>
+
+
   
   <div class="mainBox" style="display:-none;">
     <header>
@@ -68,7 +120,7 @@
           <div class="decor"></div>
         </div> -->
         <div class="discussion__block1">
-          <button class="discussion__btnBlock" type="button">
+          <button class="discussion__btnBlock" type="button" onclick="openModal()">
             <div class="discussion__btnText">Обсудить проект</div>
             <img src="./images/ArrowRight.svg" alt="arrow">
           </button>
@@ -463,17 +515,17 @@
 
           <!-- 1 -->
           <div class="rates__itemBox">
-            <div class="rates__itemLeft">
+            <div class="rates__itemLeft" data-copyContent=".discussion__btnBlock+">
               <div class="rates__itemLeftTitl">
                 Разработка лэндинга или сайт визитки
               </div>
               <div class="rates__itemLeftText">
                 Небольшой сайт состоящий из одной страницы
               </div>
-              <button class="rates__btnBlock" type="button">
+              <!-- <button class="rates__btnBlock" type="button">
                 <div class="rates__btnText">Обсудить проект</div>
                 <img src="./images/ArrowRight.svg" alt="arrow">
-              </button>
+              </button> -->
             </div>
 
             <div class="rates__itemRight">
@@ -500,17 +552,17 @@
 
           <!-- 2 -->
           <div class="rates__itemBox">
-            <div class="rates__itemLeft">
+            <div class="rates__itemLeft" data-copyContent=".discussion__btnBlock+">
               <div class="rates__itemLeftTitl">
                 Разработка корпоративного  сайта
               </div>
               <div class="rates__itemLeftText">
                 Небольшой сайт с n-количеством страниц
               </div>
-              <button class="rates__btnBlock" type="button">
+              <!-- <button class="rates__btnBlock" type="button">
                 <div class="rates__btnText">Обсудить проект</div>
                 <img src="./images/ArrowRight.svg" alt="arrow">
-              </button>
+              </button> -->
             </div>
 
             <div class="rates__itemRight">
@@ -537,17 +589,17 @@
 
           <!-- 3 -->
           <div class="rates__itemBox">
-            <div class="rates__itemLeft">
+            <div class="rates__itemLeft" data-copyContent=".discussion__btnBlock+">
               <div class="rates__itemLeftTitl">
                 Разработка интернет - магазина
               </div>
               <div class="rates__itemLeftText">
                 Полноценный каталог вашей продукции
               </div>
-              <button class="rates__btnBlock" type="button">
+              <!-- <button class="rates__btnBlock" type="button">
                 <div class="rates__btnText">Обсудить проект</div>
                 <img src="./images/ArrowRight.svg" alt="arrow">
-              </button>
+              </button> -->
             </div>
 
             <div class="rates__itemRight">
@@ -631,8 +683,10 @@
                       items.forEach(element => { element.classList.remove("itemSelected"); });
                       el.parentElement.classList.add('itemSelected');
                       document.getElementById('dropTarget').innerText = el.innerText;
-                      document.getElementById('cPhoneMail').placeholder = placeholder;
-                      document.getElementById('cPhoneMail').focus();
+                      try{
+                        document.getElementById('cPhoneMail').placeholder = placeholder;
+                        document.getElementById('cPhoneMail').focus();
+                      }catch(e){console.log("cPhoneMail", e)}
                     }
                   </script>
                   <!-- Items -->
@@ -710,7 +764,9 @@
     let cloneArr = [];
     let targetArr = []
     dtcArr.forEach(elem => {
-      const selector  = elem.getAttribute('data-copyContent');
+      let selector  = elem.getAttribute('data-copyContent');
+      let append = selector.indexOf('+') >= 0;
+      selector = selector.replace("+", "");
       let o = cloneArr.find(el => el.sel == selector );
       if(!o){
         let d = document.querySelector(selector);
@@ -720,9 +776,10 @@
       targetArr.push({
         elem: elem,
         newClone: o.d.cloneNode(true),
+        append: append,
       });
     });
-    targetArr.forEach(target => { target.elem.prepend(target.newClone); }); //appendChild
+    targetArr.forEach(target => { target.append ? target.elem.appendChild(target.newClone) : target.elem.prepend(target.newClone); });
   }
 </script>
 </html>

@@ -11,21 +11,88 @@
 <body>
 
   <hr>
+  <button class="modal__open"  onclick="openModal()">openModal</button>
+  <div class="modal__box">
+    <div class="modal" id="modal">
+      <div class="modal__content">
+        <img class="modal__close"  src="./images/close.svg" alt="close" onclick="closeModal()">
+        <div class="modal__title">Расскажите о своем проекте</div>
+        <div class="modal__subTitle">
+          Заполните все поля, и я свяжусь с вами
+          в ближайшее время
+        </div>
+        <div class="hline"></div>
+        <div class="modal__formContainer">
+
+        </div>
+      </div>
+    </div>
+    <div class="modal__shadow" id="modal-shadow" onclick="closeModal()">
+    </div>
+  
+    <script>
+      function openModal() {
+        // disableScroll()
+        //let w = window.innerWidth - document.documentElement.clientWidth; // window.innerWidth - document.body.offsetWidth;
+        // document.body.style.marginLeft  = -w + "px";
+        document.body.parentElement.classList.add("modal__noScroll");
+        document.getElementById("modal").style.top = "0px";
+        document.getElementById("modal-shadow").style.display = "block";
+      }
+      function closeModal() {
+        // enableScroll()
+        // document.body.style.marginLeft = "0px";
+        document.body.parentElement.classList.remove("modal__noScroll");
+        document.getElementById("modal").style.top = "-2400px";
+        document.getElementById("modal-shadow").style.display = "none";
+      }
+      // function disableScroll() {
+      //   // Get the current page scroll position
+      //   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      //   let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+      //   // if any scroll is attempted, set this to the previous value
+      //   window.onscroll = function() {
+      //       window.scrollTo(scrollLeft, scrollTop);
+      //   };
+      // }
+      // function enableScroll() {
+      //     window.onscroll = function() {};
+      // }      
+    </script>
+  </div>
+
+  <hr>
   <div class="ddbox">
     <!-- from https://codepen.io/robsonklein23/pen/jOYyKVV?editors=1100 -->
     <label class="drop">
       <input type="checkbox" id="target-drop-example"> <!-- Toggle Drop -->
-      <span class="drop__control">Telegram</span> <!-- Fake button -->
+      <span class="drop__control" id="dropTarget">Звонок на телефон</span> <!-- Fake button -->
+      <script>
+        function dropSelect(el, placeholder){
+          debugger;
+          try{
+            let speech = new window.SpeechSynthesisUtterance(); speech.text = placeholder;
+            window.speechSynthesis.speak(speech);
+          }catch(e){console.log("speek", e)}
 
+          let items = el.parentElement.parentElement.querySelectorAll('.drop__item');
+          items.forEach(element => { element.classList.remove("itemSelected"); });
+          el.parentElement.classList.add('itemSelected');
+          document.getElementById('dropTarget').innerText = el.innerText;
+          try{
+            document.getElementById('cPhoneMail').placeholder = placeholder;
+            document.getElementById('cPhoneMail').focus();
+          }catch(e){console.log("cPhoneMail", e)}
+        }
+      </script>
       <!-- Items -->
       <ul class="drop__items">
-        <li class="drop__item"><a href="javascript:void(0)"><label for="target-drop-example">Звонок на телефон</label></a></li>
-        <li class="drop__item itemSelected"><a href="javascript:void(0)"><label for="target-drop-example">Telegram</label></a></li>
-        <li class="drop__item"><a href="javascript:void(0)"><label for="target-drop-example">WhatsApp</label></a></li>
-        <li class="drop__item"><a href="javascript:void(0)"><label for="target-drop-example">Viber</label></a></li>
-        <li class="drop__item"><a href="javascript:void(0)"><label for="target-drop-example">SMS сообщение</label></a></li>
+        <li class="drop__item itemSelected"><a href="javascript:void(0)" onclick="dropSelect(this, 'Введите телефон')"><label for="target-drop-example">Звонок на телефон</label></a></li>
+        <li class="drop__item"><a href="javascript:void(0)" onclick="dropSelect(this, 'Введите Telegram')"><label for="target-drop-example">Telegram</label></a></li>
+        <li class="drop__item"><a href="javascript:void(0)" onclick="dropSelect(this, 'Введите WhatsApp')"><label for="target-drop-example">WhatsApp</label></a></li>
+        <li class="drop__item"><a href="javascript:void(0)" onclick="dropSelect(this, 'Введите Viber')"><label for="target-drop-example">Viber</label></a></li>
+        <li class="drop__item"><a href="javascript:void(0)" onclick="dropSelect(this, 'Введите телефон')"><label for="target-drop-example">SMS сообщение</label></a></li>
       </ul>
-
       <!-- Alternative to close dropdown with click out -->
       <label for="target-drop-example" class="drop__closeOverlay"></label>
     </label>
