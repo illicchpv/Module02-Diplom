@@ -622,6 +622,11 @@
                   <span class="control" id="dropTarget">Звонок на телефон</span> <!-- Fake button -->
                   <script>
                     function dropSelect(el, placeholder){
+                      try{
+                        let speech = new window.SpeechSynthesisUtterance(); speech.text = placeholder;
+                        window.speechSynthesis.speak(speech);
+                      }catch(e){console.log("speek", e)}
+
                       let items = el.parentElement.parentElement.querySelectorAll('.item-drop');
                       items.forEach(element => { element.classList.remove("itemSelected"); });
                       el.parentElement.classList.add('itemSelected');
