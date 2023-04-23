@@ -50,10 +50,12 @@
   &__pojStep{
     margin-top: 25px;
     @include fs16r;
+    color: rgba($txtColor, .8);
   }
   &__pojTime{
     margin-top: 40px;
     @include fs16r;
+    color: rgba($txtColor, .8);
     font-weight: 700;
   }
   &__pojScreen{

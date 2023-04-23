@@ -34,6 +34,7 @@
     flex-basis: calc($rpart);
     max-width: calc($rpart);
     @include fs28r;
+    color: rgba($txtColor, .8);
   }
   
   &__itemBox{

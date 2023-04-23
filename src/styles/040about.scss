@@ -19,6 +19,7 @@
     max-width: $rpart;
     flex-shrink: 1;
     @include fs28r;
+    color: rgba($txtColor, .8);
   }
 
   // -----------------------
@@ -50,6 +51,7 @@
   &__propText{
     margin-top: 20px;
     @include fs14r;
+    color: rgba($txtColor, .8);
   }
 
 }
@@ -69,10 +71,11 @@
   &__nom{
     display: inline-block;
     // margin-right: 100px;
-    width: 150px;
+    width: 75px;
   }
   &__text{
     @include fs16r;
+    color: rgba($txtColor, .8);
     flex-basis: calc($rpart);
     max-width: calc($rpart);
   }
