@@ -6,9 +6,9 @@
   width: 100%;
   // background-color: red;
   padding-bottom: 58px;
-  &_footer{
-    padding-top: 61px;
-  }
+  // &_footer{ //  hmenu_footer
+  //   padding-top: 61px;
+  // }
 
   &__box {
     display: flex;
@@ -32,4 +32,8 @@
     opacity: 0.5;
     border-left: 1px solid; // white;
   }
+}
+
+.footer .hmenu{
+  padding-top: 61px;
 }

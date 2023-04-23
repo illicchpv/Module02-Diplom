@@ -598,14 +598,14 @@
 
           <div class="comunication__block">
 
-            <div class="comunication__socialBox">
-              <div class="socials socials_500">
+            <div class="comunication__socialBox" data-copyContent=".socials">
+              <!-- <div class="socials">
                 <div class="socials__social"><a href="#">Vk</a></div>
                 <div class="socials__socialSep"></div>
                 <div class="socials__social"><a href="#">Instagram</a></div>
                 <div class="socials__socialSep"><i class="decorO decorO discussion__decorO"></i></div>
                 <div class="socials__social"><a href="#">Linkedin</a></div>
-                </div>
+              </div> -->
             </div>
 
             <form class="comunication__form form">
@@ -659,8 +659,8 @@
         <div class="hline"></div>
 
         <!-- 09 footer -->
-        <section class="footer">
-          <nav class="hmenu hmenu_footer">
+        <section class="footer" data-copyContent=".hmenu">
+          <!-- <nav class="hmenu">
             <div class="hmenu__box">
               <div class="hmenu__menuItem"><a href="#">Обо&nbsp;мне</a>  
               </div>
@@ -681,9 +681,8 @@
               <div class="hmenu__menuItem"><a href="#">alexdev@gmail.com</a>
               </div>
             </div>
-          </nav>
+          </nav> -->
 
-          
           <div class="footer__text">
             <p>
                 &copy; 2020, Все права защищены
@@ -704,4 +703,26 @@
     
 <div style="height: 400px; background-color: cadetblue;"></div>
 </body>
+<script>
+  // if(false)
+  { // вставляем копии '<selector>' в места с data-copyContent='<selector>'
+    let dtcArr = document.querySelectorAll("[data-copyContent]");
+    let cloneArr = [];
+    let targetArr = []
+    dtcArr.forEach(elem => {
+      const selector  = elem.getAttribute('data-copyContent');
+      let o = cloneArr.find(el => el.sel == selector );
+      if(!o){
+        let d = document.querySelector(selector);
+        o = { sel: selector, d: d, };
+        cloneArr.push(o);
+      }
+      targetArr.push({
+        elem: elem,
+        newClone: o.d.cloneNode(true),
+      });
+    });
+    targetArr.forEach(target => { target.elem.prepend(target.newClone); }); //appendChild
+  }
+</script>
 </html>

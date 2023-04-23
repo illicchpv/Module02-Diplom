@@ -67,14 +67,21 @@
       }  
     }
   }
-  &_500{
-    a{
-      font-weight: 500;
-    }
-  }
+  // &_500{   socials_500
+  //   a{
+  //     font-weight: 500;
+  //   }
+  // }
 
   &__socialSep{
     position: relative;
     border-left: 1px solid rgba($txtColor, 0.5); // white;
   }
+}
+
+.comunication__block .socials__socialSep .decorO{
+  display: none;
+} 
+.comunication__block .socials a{
+  font-weight: 500;
 }
