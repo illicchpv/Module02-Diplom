@@ -38,6 +38,10 @@
     </div>
     <script>
       function openModal() {
+        {// перетаскиваем форму отсюда 	.comunication__block +
+          let elem = document.querySelector(".comunication__form");
+          document.querySelector(".modal__formContainer").appendChild(elem); // сюда
+        }
         // disableScroll()
         //let w = window.innerWidth - document.documentElement.clientWidth; // window.innerWidth - document.body.offsetWidth;
         document.body.style.marginLeft  = -(window.innerWidth - document.documentElement.clientWidth) + "px";
@@ -46,6 +50,10 @@
         document.getElementById("modal-shadow").style.display = "block";
       }
       function closeModal() {
+        {// перетаскиваем форму обратно .comunication__block_form
+          let elem = document.querySelector(".comunication__form");
+          document.querySelector(".comunication__block_form").appendChild(elem); // сюда // .appendChild(elem); // .prepend(elem); //
+        }
         // enableScroll()
         document.body.style.marginLeft = "";
         document.body.parentElement.classList.remove("modal__noScroll");
@@ -621,7 +629,7 @@
           </div>
           <div class="hline"></div>
 
-          <div class="comunication__block">
+          <div class="comunication__block comunication__block_form">
 
             <div class="comunication__socialBox" data-copyContent=".socials">
             </div>
