@@ -112,10 +112,21 @@
   padding: 0;
   color: $txtColor;
   cursor: pointer;
-  border-bottom: 1px solid transparent;
+  position: relative;
 
-  &:hover{
-    border-bottom: 1px solid rgba($txtColor, 1);
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: rgba($txtColor, 1);
+    transition: width .3s ease-out;
+  }
+  &:hover::before {
+    width: 100%;
   }
 }
 .rates .btnBlock{

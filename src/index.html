@@ -17,7 +17,6 @@
     <a href="ui.html" target="_blank">ui.</a>
   </div> -->
 
-
   <!-- modal -->
   <div class="modal__box">
     <div class="modal" id="modal">
@@ -37,28 +36,40 @@
     <div class="modal__shadow" id="modal-shadow" onclick="closeModal()">
     </div>
     <script>
+      let scrollTop;
+      let scrollLeft;
       function openModal() {
         {// перетаскиваем форму отсюда 	.comunication__block +
           let elem = document.querySelector(".comunication__form");
           document.querySelector(".modal__formContainer").appendChild(elem); // сюда
         }
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+        console.log("store", scrollLeft, scrollTop, window.pageYOffset, document.documentElement.scrollTop)
+        window.scrollTo(0, 0);
+        
         // disableScroll()
-        //let w = window.innerWidth - document.documentElement.clientWidth; // window.innerWidth - document.body.offsetWidth;
-        document.body.style.marginLeft  = -(window.innerWidth - document.documentElement.clientWidth) + "px";
+        // let w = window.innerWidth - document.documentElement.clientWidth; // window.innerWidth - document.body.offsetWidth;
+        // document.body.style.marginLeft  = -(window.innerWidth - document.documentElement.clientWidth) + "px";
         document.body.parentElement.classList.add("modal__noScroll");
         document.getElementById("modal").style.top = "0px";
         document.getElementById("modal-shadow").style.display = "block";
+        // window.location = "#modal";
+        // document.getElementById("cPhoneMail").focus();
       }
       function closeModal() {
         {// перетаскиваем форму обратно .comunication__block_form
           let elem = document.querySelector(".comunication__form");
           document.querySelector(".comunication__block_form").appendChild(elem); // сюда // .appendChild(elem); // .prepend(elem); //
         }
-        // enableScroll()
-        document.body.style.marginLeft = "";
+        // document.body.style.marginLeft = "unset";
         document.body.parentElement.classList.remove("modal__noScroll");
         document.getElementById("modal").style.top = "-2400px";
         document.getElementById("modal-shadow").style.display = "none";
+        console.log("test", scrollLeft, scrollTop, window.pageYOffset, document.documentElement.scrollTop)
+        console.log("set", scrollLeft, scrollTop)
+        window.scrollTo(scrollLeft, scrollTop);
+        console.log("test", scrollLeft, scrollTop, window.pageYOffset, document.documentElement.scrollTop)
       }
       // function disableScroll() {
       //   // Get the current page scroll position
