@@ -74,8 +74,54 @@
       // }      
     </script>
   </div>
+  <!-- BurgerMenu -->
+  <div class="burgerMenu__box"> <!-- onclick="closeBurgerMenu()" -->
+    <div class="burgerMenu" id="burgerMenu">
+      <div class="burgerMenu__bg"><!-- background: #232326; -->
+        <div class="burgerMenu__content">
+          <img class="burgerMenu__close"  src="./images/close.svg" alt="close" onclick="closeBurgerMenu()">
+          <div class="burgerMenu__inner">
+            <div class="hline hline_02"></div>
+            <a href="#" class="burgerMenu__item">Обо&nbsp;мне</a>
+            <div class="hline hline_02"></div>
+            <a href="#" class="burgerMenu__item">Портфолио</a>
+            <div class="hline hline_02"></div>
+            <a href="#" class="burgerMenu__item">Этапы&nbsp;работ</a>
+            <div class="hline hline_02"></div>
+            <a href="#" class="burgerMenu__item">Цены</a>
+            <div class="hline hline_02"></div>
+            <a href="#" class="burgerMenu__item">Обратная&nbsp;связь</a>
+            <div class="hline hline_02"></div>
+            <div class="burgerMenu__bottom" data-copyContent=".socials+">
+              <div class="burgerMenu__callBlock">
+                <div class="hmenu__box hmenu__box_2">
+                  <div class="hmenu__menuItem"><a href="tel:89237777777">8&nbsp;923&nbsp;777-77-77&nbsp;</a>
+                  </div>
+                  <div class="hmenu__menuSep">&nbsp;
+                  </div>
+                  <div class="hmenu__menuItem"><a href="mailto:alexdev@gmail.com">alexdev@gmail.com</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-
+    <script>
+      function openBurgerMenu(){
+        document.body.style.marginLeft  = -(window.innerWidth - document.documentElement.clientWidth) + "px";
+        document.body.parentElement.classList.add("modal__noScroll");
+        document.getElementById("burgerMenu").style.top = "0px";
+      }
+      function closeBurgerMenu(){
+        document.body.style.marginLeft = "";
+        document.body.parentElement.classList.remove("modal__noScroll");
+        document.getElementById("burgerMenu").style.top = "-2400px";
+      }
+    </script>
+  </div>
   
   <div class="mainBox" style="display:-none;">
     <header>
@@ -93,11 +139,22 @@
           </div>
         </div>
         <div class="hmenu__box hmenu__box_2">
-          <div class="hmenu__menuItem"><a href="#">8&nbsp;923&nbsp;777-77-77</a>
+          <div class="hmenu__menuItem"><a href="tel:89237777777">8&nbsp;923&nbsp;777-77-77&nbsp;</a>
           </div>
-          <div class="hmenu__menuSep">
+          <div class="hmenu__menuSep">&nbsp;
           </div>
-          <div class="hmenu__menuItem"><a href="#">alexdev@gmail.com</a>
+          <div class="hmenu__menuItem"><a href="mailto:alexdev@gmail.com">alexdev@gmail.com</a>
+          </div>
+        </div>
+      </nav>
+      <nav class="hmenuMob">
+        <div class="hmenu__box">
+          <div class="hmenu__menuItem"><a href="tel:89237777777">8&nbsp;923&nbsp;777-77-77</a>
+          </div>
+          <div class="hmenu__menuItem">
+            <button class="hmenuMob__burger" type="button" onclick="openBurgerMenu()">
+              <img src="./images/burger.svg" alt="menu burger">
+            </button>
           </div>
         </div>
       </nav>

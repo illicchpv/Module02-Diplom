@@ -53,6 +53,9 @@
   width: 100%;
   border-top: 1px solid rgba($txtColor, 1);
   position: relative;
+  &_02{
+    border-top: 1px solid rgba($txtColor, .2);
+  }
 }
 
 .socials{
@@ -78,8 +81,21 @@
     border-left: 1px solid rgba($txtColor, 0.5); // white;
   }
 }
+.burgerMenu__bottom .socials__socialSep{
+  opacity: 0.2;
+}
+
+.burgerMenu .socials{
+  justify-content: center;
+}
+.burgerMenu .socials a{
+  font-size: 12px;
+}
 
 .comunication__block .socials__socialSep .decorO{
+  display: none;
+} 
+.burgerMenu .decorO{
   display: none;
 } 
 .comunication__block .socials a{

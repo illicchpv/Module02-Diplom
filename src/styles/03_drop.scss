@@ -210,3 +210,71 @@ $lrPadding: 20px;
     overflow-y: hidden;
   }
 }
+
+// background: #121213;
+// opacity: 0.6;
+.burgerMenu{
+  background: rgba(#121213, 1.6) ;
+  position: fixed;
+  top: 0;
+  top: -2400px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  // pointer-events:none;
+
+  transition: top 0.3s;
+
+  & .hline{
+    color: rgba($txtColor, 0.2);
+  }
+
+  &__box{
+    position: relative;
+  }
+  &__open{
+    margin-bottom: 20px;
+  }
+  &__content{
+    padding: 20px 10px;
+    position: relative;
+    box-sizing: border-box;
+  }
+  &__bg{
+    background: #232326;
+  }
+  &__close{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  &__inner{
+    margin-top: 80px;
+    text-align: center;
+  }
+  &__item {
+    padding-top: 20px;
+    display: inline-block;
+    @include fs26r;
+    text-decoration: none;
+    margin-bottom: 20px;
+    // pointer-events:initial;
+
+    &:hover{
+      color: $txtHover;
+    }
+  }
+  &__bottom{
+    display: inline-block;
+    margin: 0 auto;
+  }
+  &__callBlock{
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+}

@@ -13,6 +13,7 @@
   &__box {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 25px;
     &_2{
       gap: 14px;
@@ -33,7 +34,33 @@
     border-left: 1px solid; // white;
   }
 }
+.burgerMenu__bottom .hmenu__menuSep{
+  opacity: 0.2;
+}
+.hmenuMob{
+  display: none;
+  margin-top: 20px;
+  margin-bottom: 40px;
+
+  &__burger{
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;    
+  }
+}
 
 .footer .hmenu{
   padding-top: 61px;
+}
+@media (max-width: 1300px){
+  .hmenuMob{
+    display: block;
+  }
+  header .hmenu{
+    display: none;
+  }
 }
