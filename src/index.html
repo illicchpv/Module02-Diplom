@@ -46,23 +46,23 @@
         scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
         console.log("store", scrollLeft, scrollTop, window.pageYOffset, document.documentElement.scrollTop)
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
         
         // disableScroll()
-        // let w = window.innerWidth - document.documentElement.clientWidth; // window.innerWidth - document.body.offsetWidth;
-        // document.body.style.marginLeft  = -(window.innerWidth - document.documentElement.clientWidth) + "px";
+        let w = window.innerWidth - document.documentElement.clientWidth; // window.innerWidth - document.body.offsetWidth;
+        document.body.style.marginLeft  = -(window.innerWidth - document.documentElement.clientWidth) + "px";
         document.body.parentElement.classList.add("modal__noScroll");
         document.getElementById("modal").style.top = "0px";
         document.getElementById("modal-shadow").style.display = "block";
         // window.location = "#modal";
-        // document.getElementById("cPhoneMail").focus();
+        document.getElementById("cPhoneMail").focus();
       }
       function closeModal() {
         {// перетаскиваем форму обратно .comunication__block_form
           let elem = document.querySelector(".comunication__form");
           document.querySelector(".comunication__block_form").appendChild(elem); // сюда // .appendChild(elem); // .prepend(elem); //
         }
-        // document.body.style.marginLeft = "unset";
+        document.body.style.marginLeft = "unset";
         document.body.parentElement.classList.remove("modal__noScroll");
         document.getElementById("modal").style.top = "-2400px";
         document.getElementById("modal-shadow").style.display = "none";
@@ -175,7 +175,7 @@
   <main>
     <div class="mainBox">
 
-      <section class="introduce" style="display:-none;">
+      <section class="introduce" id="introduce" style="display:-none;">
         <div class="introduce__PhotoBox">
           <img class="introduce__img" src="images/im.jpg"></img>
         </div>
@@ -295,7 +295,7 @@
         </div>
         <div class="hline"></div>
 
-        <div class="about__steps">
+        <div class="about__steps" id="about__steps">
 
             <div class="step">
               <div class="step__row">
@@ -387,7 +387,7 @@
         </section>
 
         <!-- 06 benefits -->
-        <section class="benefits" style="display:-none;">
+        <section class="benefits" id="portfolio" style="display:-none;">
           <div class="benefits__grid">
 
             <div class="benefits__item">
@@ -560,7 +560,7 @@
         </section>
 
         <!-- 07 rates -->
-        <section class="rates" style="display:-none;">
+        <section class="rates" id="rates" style="display:-none;">
           <div class="rates__titleBox">
             <div class="rates__title">
               <i class="decorO decorO_3 rates__decorO3"></i>тарифы
@@ -675,7 +675,7 @@
         </section>
 
         <!-- 08 comunication -->
-        <section class="comunication" style="display:-none;">
+        <section class="comunication" id="comunication" style="display:-none;">
 
           <div class="comunication__block">
             <div class="comunication__title">
@@ -705,7 +705,7 @@
             <form class="comunication__form form">
               <label class="form__label" for="cPhoneMail">Телефон или почта</label>
               
-              <input class="form__input" type="text" id="cPhoneMail" autocomplete="off" placeholder="Введите телефон">
+              <input class="form__input" type="text" id="cPhoneMail" autocomplete="off" tabindex="1" placeholder="Введите телефон"  onfocus="speakPH(this)">
 
               <label class="form__label" for="cType">Выберите удобный способ связи</label>
               <div class="form__type comunication__dropLine">
@@ -715,11 +715,6 @@
                   <span class="drop__control" id="dropTarget">Звонок на телефон</span> <!-- Fake button -->
                   <script>
                     function dropSelect(el, placeholder){
-                      try{
-                        let speech = new window.SpeechSynthesisUtterance(); speech.text = placeholder;
-                        window.speechSynthesis.speak(speech);
-                      }catch(e){console.log("speek", e)}
-
                       let items = el.parentElement.parentElement.querySelectorAll('.drop__item');
                       items.forEach(element => { element.classList.remove("itemSelected"); });
                       el.parentElement.classList.add('itemSelected');
@@ -728,6 +723,18 @@
                         document.getElementById('cPhoneMail').placeholder = placeholder;
                         document.getElementById('cPhoneMail').focus();
                       }catch(e){console.log("cPhoneMail", e)}
+                    }
+                    function speakPH(el){
+                      let placeholder = el.getAttribute("placeholder")
+                      if(!placeholder)
+                        return;
+                      speakText(placeholder);
+                    }
+                    function speakText(txt){
+                      try{
+                        let speech = new window.SpeechSynthesisUtterance(); speech.text = txt;
+                        window.speechSynthesis.speak(speech);
+                      }catch(e){console.log("speakText", e)}
                     }
                   </script>
                   <!-- Items -->
@@ -743,7 +750,7 @@
                 </label>
               </div>
 
-              <button class="form__button"  type="button">Отправить</button>
+              <button class="form__button"  type="button" onclick="speakText('вот сейчас отправлю !!!!!!!!!!!!!!!!!!!! щас.');setTimeout(()=>{closeModal()}, 3000)">Отправить</button>
             </form>
 
           </div>
