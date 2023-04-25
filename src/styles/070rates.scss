@@ -30,6 +30,7 @@
     // width: calc(100vw/2);
     @include fs28b;
   }
+
   &__text{
     flex-basis: calc($rpart);
     max-width: calc($rpart);
@@ -43,7 +44,7 @@
     justify-content: space-between;
     position: relative;
     z-index: 1;
-    margin-bottom: 60px;
+    margin-bottom: 58px;
 
   }
   &__itemLeft{
@@ -111,7 +112,7 @@
     top: -12px;
   }
   &__itemRightPrice{
-    margin-top: 35px;
+    margin-top: 51px;
     @include fs42r;
     font-weight: 700;
     position: relative;

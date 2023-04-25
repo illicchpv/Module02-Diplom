@@ -39,16 +39,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
+  }
+  &__pojDecription{
+    // padding-left: 19px;
   }
   &__pojName{
+    margin-top: -31px;
     @include fs28r;
     font-weight: 700;
-    margin-bottom: 10px;
+    padding-bottom: 12px;
 
   }
   &__pojStep{
-    margin-top: 25px;
+    margin-top: 15px;
+    // margin-top: 12px;
     @include fs16r;
     color: rgba($txtColor, .8);
   }
@@ -65,7 +70,7 @@
   }
 
   &__otherActivities{
-    margin-top: 180px;
+    margin-top: 177px;
     max-width: 80%;
     @include fs28r;
     margin-bottom: 80px;

@@ -1,25 +1,27 @@
 // 080comunication
 .comunication{
-  margin-top: 166px;
+  margin-top: 174px;
   margin-bottom: 130px;
 
   &__block{
-    margin-top: 60px;
+    margin-top: 50px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 60px;
   }
 
   &__title{
-
+    @include fs28b;
+    letter-spacing: 1;
   }
   &__decor{
     z-index: -1;
     position: absolute;
-    left: -126px;
-    top: -56px;
+    left: -151px;
+    top: -31px;
   }
   &__text{
+    margin-top: 3px;
     flex-basis: calc($rpart);
     max-width: calc($rpart);
     position: relative;
