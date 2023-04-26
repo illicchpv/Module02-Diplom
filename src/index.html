@@ -93,23 +93,22 @@
           <img class="burgerMenu__close"  src="./images/close.svg" alt="close" onclick="closeBurgerMenu()">
           <div class="burgerMenu__inner">
             <div class="hline hline_02"></div>
-            <a class="burgerMenu__item" href="#introduce" onclick="smoothScroll(event)">Обо&nbsp;мне</a>
+            <a class="burgerMenu__item" href="#introduce" onclick="closeBurgerMenu();smoothScroll(event)">Обо&nbsp;мне</a>
             <div class="hline hline_02"></div>
-            <a class="burgerMenu__item" href="#portfolio" onclick="smoothScroll(event)">Портфолио</a>
+            <a class="burgerMenu__item" href="#portfolio" onclick="closeBurgerMenu();smoothScroll(event)">Портфолио</a>
             <div class="hline hline_02"></div>
-            <a class="burgerMenu__item" href="#about__steps" onclick="smoothScroll(event)">Этапы&nbsp;работ</a>
+            <a class="burgerMenu__item" href="#about__steps" onclick="closeBurgerMenu();smoothScroll(event)">Этапы&nbsp;работ</a>
             <div class="hline hline_02"></div>
-            <a class="burgerMenu__item" href="#rates" onclick="smoothScroll(event)">Цены</a>
+            <a class="burgerMenu__item" href="#rates" onclick="closeBurgerMenu();smoothScroll(event)">Цены</a>
             <div class="hline hline_02"></div>
-            <a class="burgerMenu__item" href="#comunication" onclick="smoothScroll(event, 'cPhoneMail')">Обратная&nbsp;связь</a>
+            <a class="burgerMenu__item" href="#comunication" onclick="closeBurgerMenu();smoothScroll(event, 'cPhoneMail')">Обратная&nbsp;связь</a>
             <div class="hline hline_02"></div>
             <div class="burgerMenu__bottom" data-copyContent=".socials+">
               <div class="burgerMenu__callBlock">
                 <div class="hmenu__box hmenu__box_2">
                   <div class="hmenu__menuItem"><a href="tel:89237777777">8&nbsp;923&nbsp;777-77-77&nbsp;</a>
                   </div>
-                  <div class="hmenu__menuSep">&nbsp;
-                  </div>
+                  <div class="vline"></div>
                   <div class="hmenu__menuItem"><a href="mailto:alexdev@gmail.com">alexdev@gmail.com</a>
                   </div>
                 </div>
@@ -152,8 +151,7 @@
         <div class="hmenu__box hmenu__box_2">
           <div class="hmenu__menuItem"><a href="tel:89237777777">8&nbsp;923&nbsp;777-77-77&nbsp;</a>
           </div>
-          <div class="hmenu__menuSep">&nbsp;
-          </div>
+          <div class="vline"></div>
           <div class="hmenu__menuItem"><a href="mailto:alexdev@gmail.com">alexdev@gmail.com</a>
           </div>
         </div>
@@ -201,9 +199,9 @@
           
           <div class="socials">
               <div class="socials__social"><a href="https://vk.com/" target="_blank">Vk</a></div>
-              <div class="socials__socialSep"></div>
+              <div class="vline"></div>
               <div class="socials__social"><a href="https://www.instagram.com/" target="_blank">Instagram</a></div>
-              <div class="socials__socialSep"><i class="decorO decorO discussion__decorO"></i></div>
+              <div class="vline"><i class="decorO decorO discussion__decorO"></i></div>
               <div class="socials__social"><a href="https://www.linkedin.com/" target="_blank">Linkedin</a></div>
           </div>
         </div>

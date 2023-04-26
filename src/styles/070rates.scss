@@ -77,13 +77,6 @@
     }
   }
 
-  // &__itemLeftLink{
-  //   margin-top: 75px;
-  //   @include fs16r;
-  //   font-weight: 700;
-  // }
-
-
   &__itemRight{
     flex-basis: calc($rpart);
     max-width: calc($rpart);

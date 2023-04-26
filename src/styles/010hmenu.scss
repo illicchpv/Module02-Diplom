@@ -11,6 +11,7 @@
   // }
 
   &__box {
+    height: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,14 +30,14 @@
       }
     }
   }
-  &__menuSep{
-    opacity: 0.5;
-    border-left: 1px solid; // white;
+
+  .footer &{
+    padding-top: 61px;
+    padding-bottom: 30px;
   }
+  
 }
-.burgerMenu__bottom .hmenu__menuSep{
-  opacity: 0.2;
-}
+
 .hmenuMob{
   display: none;
   margin-top: 20px;
@@ -53,10 +54,6 @@
   }
 }
 
-.footer .hmenu{
-  padding-top: 61px;
-  padding-bottom: 30px;
-}
 @media (max-width: 1300px){
   .hmenuMob{
     display: block;

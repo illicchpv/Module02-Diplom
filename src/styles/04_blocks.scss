@@ -19,7 +19,16 @@
     width: 90px;
     height: 90px;
   }
+
+  .comunication__block .vline &{
+    display: none;
+  } 
+  .burgerMenu &{
+    display: none;
+  } 
+  
 }
+
 // decorV
 .decorV{
   width: 253px;
@@ -51,16 +60,31 @@
 .hline{
   display: block;
   width: 100%;
-  border-top: 1px solid rgba($txtColor, 1);
+  height: 1px;
+  background-color: rgba($txtColor, 1);
+  &_02{ // in burger
+    background-color: rgba($txtColor, .2);
+  }
+}
+
+.vline{
+  display: block;
   position: relative;
-  &_02{
-    border-top: 1px solid rgba($txtColor, .2);
+  width: 1px;
+  height: 100%;
+  background-color: rgba($txtColor, .5);
+
+  .burgerMenu__bottom &{
+    background-color: rgba($txtColor, .2);
   }
 }
 
 .socials{
+  height: 20px;
   display: flex;
+  align-items: center;
   gap: 28px;
+
   &__social{
     a{
       text-decoration: none;
@@ -70,36 +94,17 @@
       }  
     }
   }
-  // &_500{   socials_500
-  //   a{
-  //     font-weight: 500;
-  //   }
-  // }
 
-  &__socialSep{
-    position: relative;
-    border-left: 1px solid rgba($txtColor, 0.5); // white;
+  .burgerMenu &{
+    justify-content: center;
   }
-}
-.burgerMenu__bottom .socials__socialSep{
-  opacity: 0.2;
-}
-
-.burgerMenu .socials{
-  justify-content: center;
-}
-.burgerMenu .socials a{
-  font-size: 12px;
-}
-
-.comunication__block .socials__socialSep .decorO{
-  display: none;
-} 
-.burgerMenu .decorO{
-  display: none;
-} 
-.comunication__block .socials a{
-  font-weight: 500;
+  .burgerMenu & a{
+    font-size: 12px;
+  }
+  .comunication__block & a{
+    font-weight: 500;
+  }
+  
 }
 
 // btnBlock
@@ -128,8 +133,8 @@
   &:hover::before {
     width: 100%;
   }
-}
-.rates .btnBlock{
-  margin-top: 75px;
-}
 
+  .rates &{
+    margin-top: 75px;
+  }
+}

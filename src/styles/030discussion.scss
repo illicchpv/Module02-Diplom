@@ -17,35 +17,6 @@
     margin-bottom: 60px;
   }
 
-  // &__btnBlock{
-  //   display: flex;
-  //   align-items: center;
-  //   gap: 22px;
-  //   background-color: transparent;
-  //   border: none;
-  //   padding: 0;
-  //   color: $txtColor;
-  //   cursor: pointer;
-  //   border-bottom: 1px solid transparent;
-
-  //   &:hover{
-  //     border-bottom: 1px solid rgba($txtColor, 1);
-  //   }
-  // }
-  // &__btnText{
-  // }
-
-  // &__socials{
-  //   display: flex;
-  //   gap: 28px;
-  // }
-  // &__social{
-  // }
-  // &__socialSep{
-  //   position: relative;
-  //   border-left: 1px solid rgba($txtColor, 0.5); // white;
-  // }
-
   &__decorO{
     left: -57px;
     top: -40px;
@@ -58,11 +29,6 @@
     margin-bottom: 60px;
   }
 }
-
-// .rates .discussion__btnBlock{
-//   margin-top: 75px;
-// }
-
 
 .skill{
   flex-basis: calc(($rpart + $gap4c)/2); // 285px;
