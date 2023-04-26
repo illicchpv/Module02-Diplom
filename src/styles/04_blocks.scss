@@ -95,16 +95,15 @@
     }
   }
 
-  .burgerMenu &{
+  &_burger{
     justify-content: center;
+    & a{
+      font-size: 12px;
+    }
   }
-  .burgerMenu & a{
-    font-size: 12px;
-  }
-  .comunication__block & a{
+  &_comunication a{
     font-weight: 500;
   }
-  
 }
 
 // btnBlock
@@ -134,7 +133,7 @@
     width: 100%;
   }
 
-  .rates &{
+  &_rates{
     margin-top: 75px;
   }
 }

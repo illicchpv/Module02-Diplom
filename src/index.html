@@ -103,7 +103,7 @@
             <div class="hline hline_02"></div>
             <a class="burgerMenu__item" href="#comunication" onclick="closeBurgerMenu();smoothScroll(event, 'cPhoneMail')">Обратная&nbsp;связь</a>
             <div class="hline hline_02"></div>
-            <div class="burgerMenu__bottom" data-copyContent=".socials+">
+            <div class="burgerMenu__bottom" data-copyContent=".socials+ socials_burger"> <!--+-->
               <div class="burgerMenu__callBlock">
                 <div class="hmenu__box hmenu__box_2">
                   <div class="hmenu__menuItem"><a href="tel:89237777777">8&nbsp;923&nbsp;777-77-77&nbsp;</a>
@@ -574,7 +574,7 @@
 
           <!-- 1 -->
           <div class="rates__itemBox">
-            <div class="rates__itemLeft" data-copyContent=".btnBlock+">
+            <div class="rates__itemLeft" data-copyContent=".btnBlock+ btnBlock_rates"><!--+-->
               <div class="rates__itemLeftTitl">
                 Разработка лэндинга или сайт визитки
               </div>
@@ -607,7 +607,7 @@
 
           <!-- 2 -->
           <div class="rates__itemBox">
-            <div class="rates__itemLeft" data-copyContent=".btnBlock+">
+            <div class="rates__itemLeft" data-copyContent=".btnBlock+ btnBlock_rates"><!--+-->
               <div class="rates__itemLeftTitl">
                 Разработка корпоративного  сайта
               </div>
@@ -640,7 +640,7 @@
 
           <!-- 3 -->
           <div class="rates__itemBox">
-            <div class="rates__itemLeft" data-copyContent=".btnBlock+">
+            <div class="rates__itemLeft" data-copyContent=".btnBlock+ btnBlock_rates"><!--+-->
               <div class="rates__itemLeftTitl">
                 Разработка интернет - магазина
               </div>
@@ -697,7 +697,7 @@
 
           <div class="comunication__block comunication__block_form">
 
-            <div class="comunication__socialBox" data-copyContent=".socials">
+            <div class="comunication__socialBox" data-copyContent=".socials socials_comunication"><!--+-->
             </div>
 
             <form class="comunication__form form">
@@ -757,7 +757,7 @@
         <div class="hline"></div>
 
         <!-- 09 footer -->
-        <section class="footer" data-copyContent=".hmenu" style="display:-none;">
+        <section class="footer" data-copyContent=".hmenu hmenu_footer" style="display:-none;"><!--+-->
 
           <div class="footer__text">
             <p>
@@ -782,10 +782,12 @@
   // if(false)
   { // вставляем копии '<selector>' в места с data-copyContent='<selector>'
     let dtcArr = document.querySelectorAll("[data-copyContent]");
-    let cloneArr = [];
-    let targetArr = []
+    let cloneArr = [], targetArr = [];
     dtcArr.forEach(elem => {
-      let selector  = elem.getAttribute('data-copyContent');
+      let params  = elem.getAttribute('data-copyContent').split(' ');
+      console.log("params:", params);
+      let mod = params.length > 1 && params[1] ?  params[1].trim() : false;
+      let selector = params[0]
       let append = selector.indexOf('+') >= 0;
       selector = selector.replace("+", "");
       let o = cloneArr.find(el => el.sel == selector );
@@ -794,9 +796,12 @@
         o = { sel: selector, d: d, };
         cloneArr.push(o);
       }
+      let nc = o.d.cloneNode(true);
+      if(mod)
+        nc.classList.add(mod);
       targetArr.push({
         elem: elem,
-        newClone: o.d.cloneNode(true),
+        newClone: nc, // mod ? o.d.cloneNode(true).classList.add(mod) : o.d.cloneNode(true),
         append: append,
       });
     });
