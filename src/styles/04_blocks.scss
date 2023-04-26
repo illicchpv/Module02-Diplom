@@ -20,13 +20,12 @@
     height: 90px;
   }
 
-  .comunication__block .vline &{
+  &_comunication{
     display: none;
-  } 
-  .burgerMenu &{
+  }
+  &_burgerMenu{
     display: none;
-  } 
-  
+  }
 }
 
 // decorV
@@ -74,7 +73,8 @@
   height: 100%;
   background-color: rgba($txtColor, .5);
 
-  .burgerMenu__bottom &{
+  &_burgerMenu{ // in burger phone | email
+    width: 1px;
     background-color: rgba($txtColor, .2);
   }
 }

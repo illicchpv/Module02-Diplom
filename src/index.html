@@ -103,12 +103,13 @@
             <div class="hline hline_02"></div>
             <a class="burgerMenu__item" href="#comunication" onclick="closeBurgerMenu();smoothScroll(event, 'cPhoneMail')">Обратная&nbsp;связь</a>
             <div class="hline hline_02"></div>
-            <div class="burgerMenu__bottom" data-copyContent=".socials+ socials_burger"> <!--+-->
+            <div class="burgerMenu__bottom" 
+                data-copyContent=".socials+ socials_burger decorO_burgerMenu vline_burgerMenu"> <!--+-->
               <div class="burgerMenu__callBlock">
                 <div class="hmenu__box hmenu__box_2">
                   <div class="hmenu__menuItem"><a href="tel:89237777777">8&nbsp;923&nbsp;777-77-77&nbsp;</a>
                   </div>
-                  <div class="vline"></div>
+                  <div class="vline vline_burgerMenu"></div>
                   <div class="hmenu__menuItem"><a href="mailto:alexdev@gmail.com">alexdev@gmail.com</a>
                   </div>
                 </div>
@@ -697,7 +698,7 @@
 
           <div class="comunication__block comunication__block_form">
 
-            <div class="comunication__socialBox" data-copyContent=".socials socials_comunication"><!--+-->
+            <div class="comunication__socialBox" data-copyContent=".socials socials_comunication decorO_comunication"><!--+-->
             </div>
 
             <form class="comunication__form form">
@@ -781,12 +782,30 @@
 <script>
   // if(false)
   { // вставляем копии '<selector>' в места с data-copyContent='<selector>'
+    // прмер: data-copyContent=".socials+ socials_burger decorO_burgerMenu vline_burgerMenu"
+    //                           p1[+]        p2/-            [p3]                [pn] ...
+    // вставить сюда(append) первый el из .socials 
+    //      (если p2 != '-')дописать ему .socials_burger в нём дописать 
+    //      всем .decorO дописать decorO_burgerMenu
+    //      всем .vline дописать vline_burgerMenu
+
     let dtcArr = document.querySelectorAll("[data-copyContent]");
     let cloneArr = [], targetArr = [];
     dtcArr.forEach(elem => {
       let params  = elem.getAttribute('data-copyContent').split(' ');
       console.log("params:", params);
-      let mod = params.length > 1 && params[1] ?  params[1].trim() : false;
+      let modArr = [];
+      if(params.length > 2 ){
+        for(let i = 2; i<params.length; i++){
+          let inCls = false;
+          let inClsMod = false;
+          if(params[i].split('_').length == 2 &&  params[i].split('_')[1].trim()){
+            modArr.push({inCls: params[i].split('_')[0].trim(), inClsMod: params[i].trim(),})
+          }
+        }
+      }
+      console.log("modArr:", modArr);
+      let mod = params.length > 1 && params[1] && params[1] != '-' ?  params[1].trim() : false;
       let selector = params[0]
       let append = selector.indexOf('+') >= 0;
       selector = selector.replace("+", "");
@@ -797,8 +816,18 @@
         cloneArr.push(o);
       }
       let nc = o.d.cloneNode(true);
+
       if(mod)
         nc.classList.add(mod);
+
+      if(modArr.length>0){
+        modArr.forEach((m)=>{
+          let icArr = nc.querySelectorAll("." + m.inCls);
+          icArr.forEach(ice => {
+            ice.classList.add(m.inClsMod);
+          });
+        });
+      }
       targetArr.push({
         elem: elem,
         newClone: nc, // mod ? o.d.cloneNode(true).classList.add(mod) : o.d.cloneNode(true),
