@@ -1,6 +1,19 @@
 // 02introduce
 .introduce{
 
+  &__PhotoBox{
+    margin: 0 auto;
+    height: 310px;
+    overflow: hidden;
+    position: relative;
+  }
+  &__img{
+    // object-fit: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+  }
   &__text{
     position: relative;
 
@@ -10,13 +23,73 @@
     position: absolute;
     left: -126px;
     top: -56px;
+
+    @media (max-width: 1440px){
+      @include vVal(left, 1440px, 1140px, -126px, -95px);
+      &:after {
+        // left: -19px;
+        // top: 8px;
+        @include vVal(left, 1440px, 1140px, -19px, 81px);
+        @include vVal(top, 1440px, 1140px, 8px, 202px);
+        left: 81px;
+        top: 202px;
+      }    
+    }
+    @media (max-width: 1200px){
+      &:after {
+        border: 20px solid transparent;
+        border-bottom: 45px solid white;
+        left: 90px;
+        top: 202px;
+      }
+    }
+    @media (max-width: 1140px){
+      left: -95px;  
+      top: -56px;
+      @include vVal(left, 1140px, 360px, -95px, -50px);
+      @include vVal(top, 1140px, 360px, -56px, -21px);
+      @include vVal(width, 1140px, 360px, 253px, 135px);
+      @include vVal(height, 1140px, 360px, 253px, 135px);
+
+      &:after {
+        left: 90px;
+        top: 202px;
+        @include vVal(left, 1140px, 360px, 90px, 47px);
+        @include vVal(top, 1140px, 360px, 202px, 102px);
+      }   
+    }
+    @media (max-width: 360px){
+      left: -50px;
+      top: -21px;      
+      width: 135px;
+      height: 135px;
+      &:after {
+        left: 47px;
+        top: 102px;
+      }   
+    }
   }
   &__fio{
     margin-top: 120px;
     @include fs28r;
+
+    @media (max-width: 1140px){
+      @include vVal(font-size, 1140px, 360px, 28px, 18px);
+    }
+    // @media (max-width: 360px){
+    //   font-size: 18px;
+    // }
   }
   &__prof{
     margin-top: 40px;
     @include fs74b;
+
+    @media (max-width: 1140px){
+      @include vVal(font-size, 1140px, 360px, 74px, 28px);
+    }
+    // @media (max-width: 360px){
+    //   font-size: 28px;
+    // }
+
   }
 }

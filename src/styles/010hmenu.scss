@@ -1,6 +1,7 @@
 // 01hmenu
 .hmenu {
   padding-top: 43px;
+
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -10,14 +11,29 @@
   //   padding-top: 61px;
   // }
 
+  @media (max-width: 1920px){
+    @include vVal(padding-top, 1920px, 768px, 43px, 19px);
+  }
+  @media (max-width: 768px){
+    display: none;
+  }
+
   &__box {
     height: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 25px;
+
+    @media (max-width: 1920px){
+      @include vVal(gap, 1920px, 768px, 25px, 15px);
+    }
+
     &_2{
       gap: 14px;
+      @media (max-width: 1920px){
+        @include vVal(gap, 1920px, 768px, 14px, 7px);
+      }
     }
   }
   &__menuItem {
@@ -42,6 +58,10 @@
   margin-top: 20px;
   margin-bottom: 40px;
 
+  @media (max-width: 768px){
+    display: block;
+  }
+
   &__burger{
     width: 36px;
     height: 36px;
@@ -53,11 +73,11 @@
   }
 }
 
-@media (max-width: 1300px){
-  .hmenuMob{
-    display: block;
-  }
-  header .hmenu{
-    display: none;
-  }
-}
+// @media (max-width: 1300px){
+//   .hmenuMob{
+//     display: block;
+//   }
+//   header .hmenu{
+//     display: none;
+//   }
+// }

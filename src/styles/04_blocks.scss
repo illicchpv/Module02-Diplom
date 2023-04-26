@@ -7,6 +7,16 @@
   position: absolute;
   z-index: -1;
 
+  @media (max-width: 1140px){
+    @include vVal(width, 1140px, 360px, 108px, 60px);
+    @include vVal(height, 1140px, 360px, 108px, 60px);
+  }
+  @media (max-width: 360px){
+    width: 60px;
+    height: 60px;
+  }
+
+
   &_2{
     width: 485px;
     height: 485px;
@@ -85,10 +95,25 @@
   align-items: center;
   gap: 28px;
 
+  @media (max-width: 1140px){
+    @include vVal(gap, 1140px, 360px, 22px, 10px);
+  }
+  @media (max-width: 360px){
+    gap: 10px;
+  }
+
   &__social{
     a{
       text-decoration: none;
       @include fs16r;
+
+      @media (max-width: 1140px){
+        @include vVal(font-size, 1140px, 360px, 16px, 12px);
+      }
+      @media (max-width: 360px){
+        font-size: 12px;
+      }
+    
       &:hover{
         color: $txtHover;
       }  
@@ -117,6 +142,15 @@
   color: $txtColor;
   cursor: pointer;
   position: relative;
+
+  @media (max-width: 1140px){
+    @include vVal(font-size, 1140px, 360px, 16px, 12px);
+    @include vVal(gap, 1140px, 360px, 22px, 10px);
+  }
+  @media (max-width: 360px){
+    font-size: 12px;
+    gap: 10px;
+  }
 
   &::before {
     content: "";

@@ -20,6 +20,15 @@
   &__decorO{
     left: -57px;
     top: -40px;
+
+    @media (max-width: 1140px){
+      @include vVal(left, 1140px, 360px, -57px, -30px);
+      @include vVal(top, 1140px, 360px, -40px, -20px);
+    }
+    @media (max-width: 360px){
+      left: -30px;
+      top: -20px;    
+    }
   }
 
   &__block2{
@@ -27,19 +36,58 @@
     justify-content: space-between;
     gap: $gap4c;
     margin-bottom: 60px;
+
+    @media (max-width: 1024px){
+      flex-wrap: wrap;
+    }
   }
 }
 
 .skill{
   flex-basis: calc(($rpart + $gap4c)/2); // 285px;
+  flex-basis: 480px;
+  flex-basis: calc((100% / 2) - 40px);
+
+  @media (max-width: 780px){
+    flex-basis: calc(50% - 5px);
+  }
+  @media (max-width: 359px) {
+    flex-basis:100%;
+  }
 
   &__title{
     margin-top: 60px;
     @include fs16b;
     margin-bottom: 15px;
+
+    @media (max-width: 1024px){
+      @include vVal(margin-top, 1024px, 360px, 60px, 40px);
+      @include vVal(font-size, 1024px, 360px, 16px, 12px);
+    }
+    @media (max-width: 360px){
+      margin-top: 40px;
+      font-size: 12px;
+    }
+    @media (max-width: 359px){
+      margin-top: 20px;
+    }
   }
   &__text{
     opacity: 0.8;
     @include fs14r;
+
+    @media (max-width: 1024px){
+      @include vVal(font-size, 1024px, 360px, 14px, 10px);
+      max-width: 70%;
+      max-width: 323px;
+      @include vVal(max-width, 1024px, 360px, 323px, 165px);
+    }
+    @media (max-width: 360px){
+      font-size: 10px;
+      max-width: 165px;
+    }
+    @media (max-width: 359px) {
+      max-width: 80%;
+    }
   }
 }
