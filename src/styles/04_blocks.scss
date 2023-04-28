@@ -37,6 +37,15 @@
   &_4{
     width: 90px;
     height: 90px;
+
+    @media (max-width: 1140px){
+      @include vVal(width, 1140px, 360px, 90px, 40px);
+      @include vVal(height, 1140px, 360px, 90px, 40px);
+    }
+    @media (max-width: 360px){
+      width: 40px;
+      height: 40px;
+    }
   }
 
   &_comunication{
@@ -178,5 +187,9 @@
 
   &_rates{
     margin-top: 75px;
+
+    @media (max-width: 1024px){
+      @include vVal(margin-top, 1024px, 360px, 75px, 15px);
+    }
   }
 }
