@@ -34,6 +34,10 @@
     @include fs12r;
     color: rgba($txtColor, 0.3);
 
+    @media (max-width: 768px){
+      @include vVal(font-size, 768px, 360px, 12px, 10px);
+    }
+
     a {
       text-decoration: none;
       color: rgba($txtColor, 0.3);

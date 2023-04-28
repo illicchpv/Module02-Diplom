@@ -46,6 +46,10 @@ $lrPadding: 20px;
     transition: all .3s ease;
     box-sizing: border-box;
 
+    @media (max-width: 768px){
+      font-size: 10px;
+    }    
+
     // @media (hover: hover) {
     //   &:hover{
     //     opacity: .75;
