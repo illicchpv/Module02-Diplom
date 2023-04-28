@@ -2,11 +2,24 @@
 .benefits{
   margin-top: 80px;
 
+  @media (max-width: 1024px){
+    @include vVal(margin-top, 1024px, 360px, 80px, 40px);
+  }
   &__grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-between;
     gap: 80px 10px;
+
+    @media (max-width: 1024px){
+      grid-template-columns: 1fr 1fr;
+      column-gap: 150px;
+      @include vVal(column-gap, 1024px, 600px, 150px, 20px);
+      @include vVal(row-gap, 1024px, 360px, 80px, 30px);
+    }
+    @media (max-width: 600px){
+      grid-template-columns: 1fr;
+    }    
   }
   &__item{
     // background-color: darkolivegreen;
@@ -14,20 +27,43 @@
     justify-content: space-between;
     align-items: center;
     gap: 40px;
+
+    @media (max-width: 600px){
+      justify-content: center;
+    }
   }
   &__itemTitle{
     @include fs16r;
     font-weight: 600;
+
+    @media (max-width: 1140px){
+      @include vVal(font-size, 1140px, 360px, 16px, 12px);
+    }
   }
   &__itemText{
     margin-top: 10px;
     @include fs14r;
     opacity: 0.8;
+
+    @media (max-width: 1140px){
+      @include vVal(font-size, 1140px, 360px, 14px, 12px);
+    }
+    @media (max-width: 600px){
+      width: 300px;
+      @include vVal(width, 600px, 360px, 300px, 250px);
+    }
+    @media (max-width: 360px){
+      // width: 300px;
+    }
   }
 }
 
 .tools{
   margin-top: 167px;
+
+  @media (max-width: 1024px){
+    @include vVal(margin-top, 1024px, 360px, 167px, 60px);
+  }
 
   &__grid{
     display: grid;
@@ -41,6 +77,10 @@
     // background-color: brown;
     border: 1px solid;
     position: relative;
+
+    @media (max-width: 1024px){
+      @include vVal(height, 1024px, 360px, 146px, 44px);
+    }
 
     &:hover{
       .tooltipInfo{
@@ -70,13 +110,18 @@
   font-weight: 500;
   text-align: center;
   background-color: rgba($txtHover, 1);
-  max-width: 232px;
   box-sizing: border-box;
   padding: 27px 15px;
+  top: 140px;
   left: 24px;
-  top: 135px;
+  max-width: 232px;
   z-index: 10;
 
+  @media (max-width: 1140px){
+    @include vVal(top, 1140px, 768px, 140px, 105px);
+    @include vVal(left, 1140px, 768px, 24px, 11px);
+    @include vVal(max-width, 1140px, 768px, 232px, 160px);
+  }
   &__name{
     text-transform: uppercase;
 
@@ -88,6 +133,10 @@
       left: 109px;
       top: -24px;
       z-index: -1;
+
+      @media (max-width: 1140px){
+        @include vVal(left, 1140px, 768px, 109px, 70px);
+      }
     }
   }
   &__text{

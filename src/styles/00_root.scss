@@ -42,6 +42,10 @@
     min-height: $v;
   }  @else if $prop == "flex-basis" {
     flex-basis: $v;
+  }  @else if $prop == "column-gap" {
+    column-gap: $v;
+  }  @else if $prop == "row-gap" {
+    row-gap: $v;
   }  @else if $prop == "gap" {
     gap: $v;
   }  
