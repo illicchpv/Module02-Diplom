@@ -3,16 +3,36 @@
   margin-top: 113px;
   // margin-bottom: 100px;
 
+  @media (max-width: 1024px){
+    @include vVal(margin-top, 1024px, 360px, 113px, 20px);
+  }
+  @media (max-width: 360px){
+    margin-top: 20px;
+  }
+
   &__block1{
     display: flex;
     justify-content: space-between;
     align-items: start;
+    align-items: baseline;
     margin-bottom: 55px;
+    
+    @media (max-width: 768px){
+      flex-direction: column;
+      margin-bottom: 35px;
+    }
   }
   &__title{
     // flex-basis: 100%;
     // width: calc(100vw/2);
     @include fs28b;
+
+    @media (max-width: 1024px){
+      @include vVal(font-size, 1024px, 360px, 28px, 16px);
+    }
+    @media (max-width: 360px){
+      font-size: 16px;
+    }
   }
   &__text{
     // flex-basis: 560px;
@@ -20,38 +40,107 @@
     flex-shrink: 1;
     @include fs28r;
     color: rgba($txtColor, .8);
+
+    @media (max-width: 1120px){
+      max-width: calc(50% - 5px);
+      flex-basis: calc(50% - 5px);
+    }
+    @media (max-width: 1024px){
+      @include vVal(font-size, 1024px, 360px, 28px, 16px);
+    }
+    @media (max-width: 768px){
+      margin-top: 20px;
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+    @media (max-width: 360px){
+      font-size: 16px;
+    }
   }
 
   // -----------------------
   &__block2{
     margin-top: 60px;
     margin-bottom: 179px;
+
+    @media (max-width: 1024px){
+      @include vVal(margin-top, 1024px, 768px, 60px, 40px);
+      @include vVal(margin-bottom, 1024px, 768px, 179px, 60px);
+    }
+    @media (max-width: 768px){
+      margin-top: 40px;
+      margin-bottom: 60px;
+    }
   }
   &__block2line{
     display: flex;
     justify-content: space-between;
     gap: $gap4c;
     margin-bottom: 60px;
+
+    @media (max-width: 768px){
+      margin-bottom: 30px;
+
+      & div:first-child{
+        // display: none;
+      }
+    }
+  }
+  &__empty{
+    @media (max-width: 768px){
+      display: none;
+    }
   }
   &__props{
     flex-basis: calc($rpart);
     max-width: calc($rpart);
+    max-width: 100%;
 
     display: flex;
     justify-content: space-between;
     gap: $gap4c;
+
+    @media (max-width: 1120px){
+      flex-basis: calc(50% - 5px);
+      max-width: calc(50% - 5px);
+    }
+    @media (max-width: 1024px){
+    }
+    @media (max-width: 768px){
+      flex-basis: 100%;    
+      max-width: 100%;
+    }
   }
   &__prop{
     // flex-basis: calc(($rpart + $gap4c)/2);
+    
+    @media (max-width: 1120px){
+      flex-basis: calc(50% - 5px);
+      max-width: calc(50% - 5px);
+    }
   }
   &__propTitle{
     @include fs16r;
     font-weight: 700;
+
+    @media (max-width: 1024px){
+      @include vVal(font-size, 1024px, 360px, 16px, 12px);
+    }
+    @media (max-width: 360px){
+      font-size: 12px;
+    }
   }
   &__propText{
     margin-top: 20px;
     @include fs14r;
     color: rgba($txtColor, .8);
+
+    @media (max-width: 1024px){
+      @include vVal(font-size, 1024px, 360px, 14px, 10px);
+    }
+    @media (max-width: 360px){
+      font-size: 10px;
+    }
   }
 
 }
@@ -63,21 +152,52 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    align-items: baseline;
     margin-bottom: 29px;
+
+    @media (max-width: 1024px){
+      gap: 10px;
+    }
   }
   &__name{
     @include fs28r;
+
+    @media (max-width: 1024px){
+      @include vVal(font-size, 1024px, 360px, 28px, 16px);
+    }
+    @media (max-width: 360px){
+      font-size: 16px;
+    }
   }
   &__nom{
     display: inline-block;
     // margin-right: 100px;
     width: 60px;
+
+    @media (max-width: 1024px){
+      @include vVal(width, 1024px, 360px, 60px, 40px);
+    }
+    @media (max-width: 360px){
+      width: 40px;
+    }
   }
   &__text{
     @include fs16r;
     color: rgba($txtColor, .8);
     flex-basis: calc($rpart);
     max-width: calc($rpart);
+
+    @media (max-width: 1120px){
+      flex-basis: calc(50% - 5px);
+      max-width: calc(50% - 5px);
+    }
+    @media (max-width: 1024px){
+      @include vVal(font-size, 1024px, 360px, 16px, 12px);
+    }
+    @media (max-width: 360px){
+      font-size: 12px;
+    }
+
   }
 
 }

@@ -20,6 +20,15 @@
   &_2{
     width: 485px;
     height: 485px;
+
+    @media (max-width: 1140px){
+      @include vVal(width, 1140px, 360px, 485px, 197px);
+      @include vVal(height, 1140px, 360px, 485px, 197px);
+    }
+    @media (max-width: 360px){
+      width: 197px;
+      height: 197px;
+    }
   }
   &_3{
     width: 140px;

@@ -6,6 +6,13 @@
     height: 310px;
     overflow: hidden;
     position: relative;
+
+    @media (max-width: 1024px){
+      @include vVal(height, 1024px, 360px, 310px, 215px);
+    }
+    @media (max-width: 360px){
+      height: 215px;
+    }
   }
   &__img{
     // object-fit: contain;

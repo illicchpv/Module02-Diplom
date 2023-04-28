@@ -47,10 +47,11 @@
   flex-basis: calc(($rpart + $gap4c)/2); // 285px;
   flex-basis: 480px;
   flex-basis: calc((100% / 2) - 40px);
+  flex-basis: calc(50% - 5px);
 
-  @media (max-width: 780px){
-    flex-basis: calc(50% - 5px);
-  }
+  // @media (max-width: 780px){
+  //   flex-basis: calc(50% - 5px);
+  // }
   @media (max-width: 359px) {
     flex-basis:100%;
   }

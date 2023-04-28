@@ -20,10 +20,26 @@
     @include fs74b;
     position: relative;
     margin-bottom: 220px;
+
+    @media (max-width: 1140px){
+      @include vVal(font-size, 1140px, 360px, 74px, 28px);
+    }
+    @media (max-width: 360px){
+      font-size: 28px;
+    }
   }
   &__decorO2{
     top: -104px;
     left: 362px;
+
+    @media (max-width: 1140px){
+      @include vVal(top, 1140px, 360px, -104px, -35px);
+      @include vVal(left, 1140px, 360px, 362px, 135px);
+    }
+    @media (max-width: 360px){
+      top: -35px;
+      left: 135px;    
+    }
   }
   &__decor2{
     position: absolute;
@@ -40,6 +56,13 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 50px;
+    background-color: rgba(white, 0.1);
+
+    @media (max-width: 800px){
+      flex-direction: column;
+      align-items: baseline;  
+      margin-bottom: 40px;    
+    }
   }
   &__pojDecription{
     // padding-left: 19px;
@@ -50,23 +73,68 @@
     font-weight: 700;
     padding-bottom: 12px;
 
+    @media (max-width: 1140px){
+      @include vVal(font-size, 1140px, 360px, 28px, 16px);
+    }
+    @media (max-width: 360px){
+      font-size: 16px;
+    }
   }
   &__pojStep{
     margin-top: 15px;
     // margin-top: 12px;
     @include fs16r;
     color: rgba($txtColor, .8);
+
+    @media (max-width: 1140px){
+      @include vVal(font-size, 1140px, 360px, 16px, 12px);
+    }
+    @media (max-width: 360px){
+      font-size: 12px;
+    }
   }
   &__pojTime{
     margin-top: 40px;
     @include fs16r;
     color: rgba($txtColor, .8);
     font-weight: 700;
+
+    @media (max-width: 1140px){
+      @include vVal(font-size, 1140px, 360px, 16px, 12px);
+    }
+    @media (max-width: 360px){
+      font-size: 12px;
+    }
   }
   &__pojScreen{
-    flex-basis: calc($rpart);
-    max-width: calc($rpart);
+    // flex-basis: calc($rpart);
+    // max-width: calc($rpart);
+    // background-color: aquamarine;
+    // min-height: 100px;
 
+    @media (max-width: 1140px){
+      // @include vVal(flex-basis, 1140px, 800px, 560px, 340px);
+      // @include vVal(max-width, 1140px, 800px, 560px, 340px);
+      // max-width: 340px;
+    }
+    @media (max-width: 800px){
+      // flex-basis: 340px; 
+      // max-width: 340px;
+      width: 100%;
+      margin-top: 40px;
+    }
+
+    & img{
+      // object-fit: contain;
+      width: calc($rpart);
+
+      @media (max-width: 1140px){
+        @include vVal(width, 1140px, 360px, 560px, 340px);
+      }
+      @media (max-width: 800px){
+        width: 100%;
+      }
+    }
   }
 
   &__otherActivities{
@@ -74,5 +142,19 @@
     max-width: 80%;
     @include fs28r;
     margin-bottom: 80px;
+
+    @media (max-width: 1140px){
+      @include vVal(font-size, 1140px, 360px, 28px, 16px);
+      @include vVal(margin-top, 1140px, 800px, 177px, 80px);
+      @include vVal(margin-bottom, 1140px, 800px, 80px, 40px);
+    }
+    @media (max-width: 800px){
+      margin-top: 80px;
+      max-width: 100%;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 360px){
+      font-size: 16px;
+    }
   }
 }
