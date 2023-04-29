@@ -908,6 +908,9 @@
   }
   // for navigation
   function smoothScroll(params) {
+    setTimeout(function () {
+      location = ref;
+    }, 500);
     return;
     let e = params.e, focusId = params.focusId;
     e.preventDefault();
