@@ -145,7 +145,7 @@
                 data-copyContent=".socials+ socials_burger decorO_burgerMenu vline_burgerMenu"> <!--+-->
               <div class="burgerMenu__callBlock">
                 <div class="hmenu__box hmenu__box_2">
-                  <div class="hmenu__menuItem"><a href="tel:89237777777">8&nbsp;923&nbsp;777-77-77&nbsp;</a>
+                  <div class="hmenu__menuItem"><a href="#about__steps" onclick="smoothScroll({e:event,prase:prase_rates})">HHHHH</a><a href="tel:89237777777">8&nbsp;923&nbsp;777-77-77&nbsp;</a>
                   </div>
                   <div class="vline vline_burgerMenu"></div>
                   <div class="hmenu__menuItem"><a href="mailto:alexdev@gmail.com">alexdev@gmail.com</a>
@@ -188,7 +188,7 @@
           </div>
         </div>
         <div class="hmenu__box hmenu__box_2">
-          <div class="hmenu__menuItem"><a href="tel:89237777777">8&nbsp;923&nbsp;777-77-77&nbsp;</a>
+          <div class="hmenu__menuItem"><a href="#about__steps" onclick="smoothScroll({e:event,prase:prase_rates})">HHHHH</a><a href="tel:89237777777">8&nbsp;923&nbsp;777-77-77&nbsp;</a>
           </div>
           <div class="vline"></div>
           <div class="hmenu__menuItem"><a href="mailto:alexdev@gmail.com">alexdev@gmail.com</a>
@@ -197,7 +197,7 @@
       </nav>
       <nav class="hmenuMob">
         <div class="hmenu__box">
-          <div class="hmenu__menuItem"><a href="tel:89237777777">8&nbsp;923&nbsp;777-77-77</a>
+          <div class="hmenu__menuItem"><a href="#about__steps" onclick="smoothScroll({e:event,prase:prase_rates})">HHHHH</a><a href="tel:89237777777">8&nbsp;923&nbsp;777-77-77</a>
           </div>
           <div class="hmenu__menuItem">
             <button class="hmenuMob__burger" type="button" onclick="openBurgerMenu()">
@@ -809,7 +809,7 @@
 
           <div class="footer__mobMenu">
             <div class="footer__mmLine1">
-              <div class="footer__mmLine1Item"><a href="tel:89237777777">8&nbsp;923&nbsp;777-77-77&nbsp;</a>
+              <div class="footer__mmLine1Item"><a href="#about__steps" onclick="smoothScroll({e:event,prase:prase_rates})">HHHHH</a><a href="tel:89237777777">8&nbsp;923&nbsp;777-77-77&nbsp;</a>
               </div>
               <div class="vline">
               </div>
@@ -908,10 +908,17 @@
   }
   // for navigation
   function smoothScroll(params) {
-    setTimeout(function () {
-      location = ref;
-    }, 500);
-    return;
+    {
+      let e = params.e, focusId = params.focusId;
+      // e.preventDefault();
+      let ref = e.target.getAttribute("href");
+      if (ref === null)
+        ref = e.target.parentElement.getAttribute("href");
+      setTimeout(function () {
+        location = ref;
+      }, 500);
+      return;
+    }
     let e = params.e, focusId = params.focusId;
     e.preventDefault();
     let ref = e.target.getAttribute("href");
