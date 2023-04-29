@@ -20,6 +20,9 @@
     @media (max-width: 600px){
       grid-template-columns: 1fr;
     }    
+    @media (max-width: 400px){
+      margin-left: -20px;
+    }
   }
   &__item{
     // background-color: darkolivegreen;
@@ -30,6 +33,15 @@
 
     @media (max-width: 600px){
       justify-content: center;
+    }
+  }
+  &__itemIcon{
+    width: 40px;
+    height: 40px;
+
+    @media (max-width: 1140px){
+      @include vVal(width, 1140px, 360px, 40px, 30px);
+      @include vVal(height, 1140px, 360px, 40px, 30px);
     }
   }
   &__itemTitle{

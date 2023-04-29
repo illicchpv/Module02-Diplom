@@ -18,6 +18,10 @@
   position: relative;
   // z-index: 10;
 
+  @media (max-width: 1140px){
+    @include vVal(margin-top, 1140px, 360px, 180px, 78px);
+  }
+
   &__title{
     @include fs74b;
     position: relative;
@@ -25,6 +29,7 @@
 
     @media (max-width: 1140px){
       @include vVal(font-size, 1140px, 360px, 74px, 28px);
+      @include vVal(margin-bottom, 1140px, 360px, 220px, 140px);
     }
     @media (max-width: 360px){
       font-size: 28px;
@@ -89,6 +94,7 @@
     color: rgba($txtColor, .8);
 
     @media (max-width: 1140px){
+      @include vVal(margin-top, 1140px, 360px, 15px, 10px);
       @include vVal(font-size, 1140px, 360px, 16px, 12px);
     }
     @media (max-width: 360px){
@@ -103,6 +109,7 @@
 
     @media (max-width: 1140px){
       @include vVal(font-size, 1140px, 360px, 16px, 12px);
+      @include vVal(margin-top, 1140px, 360px, 40px, 23px);
     }
     @media (max-width: 360px){
       font-size: 12px;
@@ -153,7 +160,7 @@
     @media (max-width: 800px){
       margin-top: 80px;
       max-width: 100%;
-      margin-bottom: 40px;
+      @include vVal(margin-bottom, 800px, 360px, 40px, 32px);
     }
     @media (max-width: 360px){
       font-size: 16px;

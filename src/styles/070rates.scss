@@ -2,6 +2,10 @@
 .rates{
   margin-top: 180px;
 
+  @media (max-width: 1024px){
+    @include vVal(margin-top, 1024px, 360px, 180px, 82px);
+  }
+
   &___decorBox{
     position: relative;
     z-index: 1;
@@ -25,6 +29,9 @@
     z-index: 1;    
     margin-bottom: 80px;
 
+    @media (max-width: 1024px){
+      @include vVal(margin-bottom, 1024px, 360px, 80px, 31px);
+    }
     @media (max-width: 768px){
       flex-direction: column;
       gap: 20px;
@@ -140,6 +147,10 @@
   }
   &__itemRightTexts{
     padding-left: 18px;
+
+    @media (max-width: 1024px){
+      margin-bottom: 0;
+    }
   }
   &__itemRightText{
     margin-top: 10px;
@@ -177,7 +188,7 @@
     position: relative;
 
     @media (max-width: 1024px){
-      @include vVal(margin-top, 1024px, 360px, 51px, 15px);
+      @include vVal(margin-top, 1024px, 360px, 51px, 1px);
       @include vVal(font-size, 1024px, 360px, 24px, 22px);
     }    
   }
