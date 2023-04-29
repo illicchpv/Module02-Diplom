@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Module02 | Diplom</title>
 
+  <script> 
+    // https://illicchpv.github.io/Module02-Diplom/dist/
+    const version = '429-01-01'; 
+  </script>
+
   <div id="stylesContainer">
     <style>
       :root{
@@ -37,11 +42,6 @@
 
 </head>
 <body>
-  <!-- 
-
-    https://illicchpv.github.io/Module02-Diplom/dist/
-
-  -->
 
   <!-- <div class="helper01" style="display:-none;">
     <a href="ui.html" target="_blank">ui.</a>
@@ -145,7 +145,7 @@
                 data-copyContent=".socials+ socials_burger decorO_burgerMenu vline_burgerMenu"> <!--+-->
               <div class="burgerMenu__callBlock">
                 <div class="hmenu__box hmenu__box_2">
-                  <div class="hmenu__menuItem"><a href="tel:89237777777">8&nbsp;923&nbsp;777-77-77&nbsp;</a>
+                  <div class="hmenu__menuItem"><a class="version" href="tel:89237777777">8&nbsp;923&nbsp;777-77-77&nbsp;</a>
                   </div>
                   <div class="vline vline_burgerMenu"></div>
                   <div class="hmenu__menuItem"><a href="mailto:alexdev@gmail.com">alexdev@gmail.com</a>
@@ -188,7 +188,7 @@
           </div>
         </div>
         <div class="hmenu__box hmenu__box_2">
-          <div class="hmenu__menuItem"><a href="tel:89237777777">8&nbsp;923&nbsp;777-77-77&nbsp;</a>
+          <div class="hmenu__menuItem"><a class="version" href="tel:89237777777">8&nbsp;923&nbsp;777-77-77&nbsp;</a>
           </div>
           <div class="vline"></div>
           <div class="hmenu__menuItem"><a href="mailto:alexdev@gmail.com">alexdev@gmail.com</a>
@@ -197,7 +197,7 @@
       </nav>
       <nav class="hmenuMob">
         <div class="hmenu__box">
-          <div class="hmenu__menuItem"><a href="tel:89237777777">8&nbsp;923&nbsp;777-77-77</a>
+          <div class="hmenu__menuItem"><a class="version" href="tel:89237777777">8&nbsp;923&nbsp;777-77-77</a>
           </div>
           <div class="hmenu__menuItem">
             <button class="hmenuMob__burger" type="button" onclick="openBurgerMenu()">
@@ -809,7 +809,7 @@
 
           <div class="footer__mobMenu">
             <div class="footer__mmLine1">
-              <div class="footer__mmLine1Item"><a href="tel:89237777777">8&nbsp;923&nbsp;777-77-77&nbsp;</a>
+              <div class="footer__mmLine1Item"><a class="version" href="tel:89237777777">8&nbsp;923&nbsp;777-77-77&nbsp;</a>
               </div>
               <div class="vline">
               </div>
@@ -850,6 +850,14 @@
 <div style="height: 400px; background-color: cadetblue;"></div>
 </body>
 <script>
+  { // показываем версию
+    // version
+    let dtcArr = document.querySelectorAll(".version");
+    dtcArr.forEach(elem => {
+      let t  = elem.innerHTML;
+      elem.innerHTML = t.replace('777-77-77', version);
+    });
+  }
   // if(false)
   { // вставляем копии '<selector>' в места с data-copyContent='<selector>'
     // прмер: data-copyContent=".socials+ socials_burger decorO_burgerMenu vline_burgerMenu"
@@ -940,43 +948,42 @@
       return;
     }
 
+    // let e = params.e, focusId = params.focusId;
+    // e.preventDefault();
+    // let ref = e.target.getAttribute("href");
+    // if (ref === null)
+    //   ref = e.target.parentElement.getAttribute("href");
+    // let element = document.querySelector(ref);
 
-    let e = params.e, focusId = params.focusId;
-    e.preventDefault();
-    let ref = e.target.getAttribute("href");
-    if (ref === null)
-      ref = e.target.parentElement.getAttribute("href");
-    let element = document.querySelector(ref);
+    // // const intersectionObserver = new IntersectionObserver((entries) => {
+    // //   let [entry] = entries;
+    // //   if (entry.isIntersecting) {
+    // //     if(params.prase)
+    // //       onfocus=speakText(params.prase);
+    // //     // setTimeout(() => alert(`${entry.target.id} is visible`), 100)
+    // //   }
+    // // });
+    // // // start observing
+    // // intersectionObserver.observe(element);
 
-    // const intersectionObserver = new IntersectionObserver((entries) => {
-    //   let [entry] = entries;
-    //   if (entry.isIntersecting) {
-    //     if(params.prase)
-    //       onfocus=speakText(params.prase);
-    //     // setTimeout(() => alert(`${entry.target.id} is visible`), 100)
-    //   }
-    // });
-    // // start observing
-    // intersectionObserver.observe(element);
+    // location = ref;
+    // return;
 
-    location = ref;
-    return;
+    // element.scrollIntoView({ behavior: "smooth" });
+    // setTimeout(function () {
+    //   location = ref;
+    // }, 500);
+    // history.pushState({}, null, ref);
+    // if(params.prase){
+    //   setTimeout(function () {
+    //     onfocus=speakText(params.prase);
+    //   }, 600);
+    // }
 
-    element.scrollIntoView({ behavior: "smooth" });
-    setTimeout(function () {
-      location = ref;
-    }, 500);
-    history.pushState({}, null, ref);
-    if(params.prase){
-      setTimeout(function () {
-        onfocus=speakText(params.prase);
-      }, 600);
-    }
-
-    if (focusId)
-      setTimeout(function (focusId) {
-        document.getElementById(focusId).focus();
-      }, 700, focusId);
+    // if (focusId)
+    //   setTimeout(function (focusId) {
+    //     document.getElementById(focusId).focus();
+    //   }, 700, focusId);
   }
 </script>
 </html>|
