@@ -137,7 +137,7 @@
             <div class="hline hline_02"></div>
             <a class="burgerMenu__item" href="#about__steps" onclick="closeBurgerMenu();smoothScroll({e:event,prase:prase_about__steps})">Этапы&nbsp;работ</a>
             <div class="hline hline_02"></div>
-            <a class="burgerMenu__item" href="#rates" onclick="closeBurgerMenu();smoothScroll({e:event,prase:prase_rates})">Цены</a>
+            <a class="burgerMenu__item" href="#rates" onclick="smoothScroll({e:event,prase:prase_rates})">Цены</a>
             <div class="hline hline_02"></div>
             <a class="burgerMenu__item" href="#comunication" onclick="closeBurgerMenu();smoothScroll({e:event,prase:prase_comunication, focusId:'cPhoneMail'})">Обратная&nbsp;связь</a>
             <div class="hline hline_02"></div>
@@ -928,7 +928,7 @@
 
     location = ref;
     return;
-    
+
     element.scrollIntoView({ behavior: "smooth" });
     setTimeout(function () {
       location = ref;
