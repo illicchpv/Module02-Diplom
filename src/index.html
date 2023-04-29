@@ -7,7 +7,7 @@
   <title>Module02 | Diplom</title>
 
   <div id="stylesContainer">
-    <style id="lightStyle">
+    <style>
       :root{
         --bg: #F3F2F0;
         --bgLight: #E7E6E4;
@@ -17,7 +17,7 @@
         --txtGray: #A8A7A6;
       }
     </style>
-    <style id="darkStyle">
+    <style>
       :root{
         --bg: #232326;
         --bgLight: #38383A;
@@ -29,11 +29,9 @@
     </style>
   </div>
   <script>
-    let isDark = true;
     function toggleStyle(){
-      let elem = isDark ? document.getElementById("lightStyle") : document.getElementById("darkStyle") 
+      let elem = document.querySelector('#stylesContainer style');
       document.getElementById("stylesContainer").appendChild(elem);
-      isDark = !isDark;
     }
   </script>
 
@@ -45,9 +43,9 @@
 
   -->
 
-  <div class="helper01" style="display:-none;">
+  <!-- <div class="helper01" style="display:-none;">
     <a href="ui.html" target="_blank">ui.</a>
-  </div>
+  </div> -->
 
   <script>
     const prase_introduce = 'Это я. !!!! Александр !!!! веб разработчик';
