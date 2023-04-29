@@ -137,7 +137,7 @@
             <div class="hline hline_02"></div>
             <a class="burgerMenu__item" href="#about__steps" onclick="closeBurgerMenu();smoothScroll({e:event,prase:prase_about__steps})">Этапы&nbsp;работ</a>
             <div class="hline hline_02"></div>
-            <a class="burgerMenu__item" href="#rates" onclick="smoothScroll({e:event,prase:prase_rates})">Цены</a>
+            <a class="burgerMenu__item" href="#rates" onclick="closeBurgerMenu();smoothScroll({e:event,prase:prase_rates})">Цены</a>
             <div class="hline hline_02"></div>
             <a class="burgerMenu__item" href="#comunication" onclick="closeBurgerMenu();smoothScroll({e:event,prase:prase_comunication, focusId:'cPhoneMail'})">Обратная&nbsp;связь</a>
             <div class="hline hline_02"></div>
@@ -145,7 +145,7 @@
                 data-copyContent=".socials+ socials_burger decorO_burgerMenu vline_burgerMenu"> <!--+-->
               <div class="burgerMenu__callBlock">
                 <div class="hmenu__box hmenu__box_2">
-                  <div class="hmenu__menuItem"><a href="#about__steps" onclick="smoothScroll({e:event,prase:prase_rates})">HHHHH</a><a href="tel:89237777777">8&nbsp;923&nbsp;777-77-77&nbsp;</a>
+                  <div class="hmenu__menuItem"><a href="tel:89237777777">8&nbsp;923&nbsp;777-77-77&nbsp;</a>
                   </div>
                   <div class="vline vline_burgerMenu"></div>
                   <div class="hmenu__menuItem"><a href="mailto:alexdev@gmail.com">alexdev@gmail.com</a>
@@ -188,7 +188,7 @@
           </div>
         </div>
         <div class="hmenu__box hmenu__box_2">
-          <div class="hmenu__menuItem"><a href="#about__steps" onclick="smoothScroll({e:event,prase:prase_rates})">HHHHH</a><a href="tel:89237777777">8&nbsp;923&nbsp;777-77-77&nbsp;</a>
+          <div class="hmenu__menuItem"><a href="tel:89237777777">8&nbsp;923&nbsp;777-77-77&nbsp;</a>
           </div>
           <div class="vline"></div>
           <div class="hmenu__menuItem"><a href="mailto:alexdev@gmail.com">alexdev@gmail.com</a>
@@ -197,7 +197,7 @@
       </nav>
       <nav class="hmenuMob">
         <div class="hmenu__box">
-          <div class="hmenu__menuItem"><a href="#about__steps" onclick="smoothScroll({e:event,prase:prase_rates})">HHHHH</a><a href="tel:89237777777">8&nbsp;923&nbsp;777-77-77</a>
+          <div class="hmenu__menuItem"><a href="tel:89237777777">8&nbsp;923&nbsp;777-77-77</a>
           </div>
           <div class="hmenu__menuItem">
             <button class="hmenuMob__burger" type="button" onclick="openBurgerMenu()">
@@ -809,7 +809,7 @@
 
           <div class="footer__mobMenu">
             <div class="footer__mmLine1">
-              <div class="footer__mmLine1Item"><a href="#about__steps" onclick="smoothScroll({e:event,prase:prase_rates})">HHHHH</a><a href="tel:89237777777">8&nbsp;923&nbsp;777-77-77&nbsp;</a>
+              <div class="footer__mmLine1Item"><a href="tel:89237777777">8&nbsp;923&nbsp;777-77-77&nbsp;</a>
               </div>
               <div class="vline">
               </div>
@@ -917,6 +917,12 @@
       }
       let element = document.querySelector(ref);
 
+      if(params.prase){
+        setTimeout(function () {
+          speakText(params.prase);
+        }, 50);
+      }
+
       setTimeout(function () {
         element.scrollIntoView({ behavior: "smooth" });
       }, 100);
@@ -925,6 +931,11 @@
         location = ref;
       }, 500);
 
+      if (focusId){
+        setTimeout(function (focusId) {
+          document.getElementById(focusId).focus();
+        }, 700, focusId);
+      }
 
       return;
     }
