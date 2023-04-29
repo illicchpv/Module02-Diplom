@@ -2,7 +2,7 @@
 .decorO{
   width: 108px;
   height: 108px;
-  background-color: red;
+  background-color: $txtHover;
   border-radius: 50%;
   position: absolute;
   z-index: -1;
@@ -60,7 +60,7 @@
 .decorV{
   width: 253px;
   height: 253px;
-  background-color: red;
+  background-color: $txtHover;
   border-radius: 50%;
   position: relative;
   &:after{
@@ -90,8 +90,10 @@
   width: 100%;
   height: 1px;
   background-color: rgba($txtColor, 1);
+  // background-color: $txtColor; opacity: 1;
   &_02{ // in burger
     background-color: rgba($txtColor, .2);
+    // background-color: $txtColor; opacity: .2;
   }
 }
 
@@ -101,10 +103,11 @@
   width: 1px;
   height: 100%;
   background-color: rgba($txtColor, .5);
+  // background-color: $txtColor; opacity: .5;
 
   &_burgerMenu{ // in burger phone | email
-    width: 1px;
     background-color: rgba($txtColor, .2);
+    // background-color: $txtColor; opacity: .2;
   }
 }
 
@@ -122,6 +125,8 @@
   }
 
   &__social{
+    // z-index: 10;
+
     a{
       text-decoration: none;
       @include fs16r;

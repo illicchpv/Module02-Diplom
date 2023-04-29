@@ -4,10 +4,10 @@
   // margin-bottom: 100px;
 
   @media (max-width: 1024px){
-    @include vVal(margin-top, 1024px, 360px, 113px, 20px);
+    @include vVal(margin-top, 1024px, 360px, 113px, 5px);
   }
   @media (max-width: 360px){
-    margin-top: 20px;
+    margin-top: 5px;
   }
 
   &__block1{

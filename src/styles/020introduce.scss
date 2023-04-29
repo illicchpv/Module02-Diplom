@@ -81,6 +81,7 @@
     @include fs28r;
 
     @media (max-width: 1140px){
+      @include vVal(margin-top, 1140px, 360px, 120px, 61px);
       @include vVal(font-size, 1140px, 360px, 28px, 18px);
     }
     // @media (max-width: 360px){
@@ -92,6 +93,7 @@
     @include fs74b;
 
     @media (max-width: 1140px){
+      @include vVal(margin-top, 1140px, 360px, 40px, 20px);
       @include vVal(font-size, 1140px, 360px, 74px, 28px);
     }
     // @media (max-width: 360px){

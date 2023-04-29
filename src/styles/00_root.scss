@@ -8,13 +8,18 @@ $propGlob: 0;
   #{$prop}: $v;
 }
 
-// // dark theme
-// $bg: #232326; // #232326
-// $bgLight: #38383A;
-// $bgSvg:'../images/bg2.svg';
-// $txtColor: #F3F2F0;
-// $txtHover: #D40000;
-// $txtGray: rgba(243, 242, 240, 0.4);
+// @function rgb($args...) { @return #{'rgb(#{$args})'}; } 
+// @function rgba($args...) { @return #{'rgba(#{$args})'}; } 
+// @function hsl($args...) { @return #{'hsl(#{$args})'}; } 
+// @function hsla($args...) { @return #{'hsla(#{$args})'}; }
+
+// dark theme
+$bg: #232326; // #232326
+$bgLight: #38383A;
+$bgSvg:'../images/bg2.svg';
+$txtColor: #F3F2F0;
+$txtHover: #D40000;
+$txtGray: rgba(243, 242, 240, 0.4);
 // // light theme
 // $bg: #F3F2F0;
 // $bgLight: #E7E6E4;
@@ -23,13 +28,15 @@ $propGlob: 0;
 // $txtHover: #D40000;
 // $txtGray: #A8A7A6;
 
-// changeble theme
-$bg: var(--bg); // #F3F2F0;
-$bgLight: var(--bgLight); // #E7E6E4;
-$bgSvg: --bgSvg; // '../images/bg2_L.svg';
-$txtColor: var(--txtColor); //  #010101;
-$txtHover: var(--txtHover); //  #D40000;
-$txtGray: var(--txtGray); // #A8A7A6;
+// // changeble theme
+// $bg: var(--bg); // #F3F2F0;
+// $bgLight: var(--bgLight); // #E7E6E4;
+// $bgSvg: --bgSvg; // '../images/bg2_L.svg';
+// $txtColor: var(--txtColor); //  #010101;
+// $txtHover: var(--txtHover); //  #D40000;
+// $txtGray: var(--txtGray); // #A8A7A6;
+
+// $txtColor: #F3F2F0;
 
 $debugBg: transparent; // rgba(darkgrey, .3); //
 $maxwidth: 1140px;
