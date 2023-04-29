@@ -48,11 +48,11 @@
   </div> -->
 
   <script>
-    const prase_introduce = 'Это я. !!!! Александр !!!! веб разработчик';
+    const prase_introduce = 'Это я. !!!! Александр Антропов !!!! веб разработчик';
     const prase_portfolio = 'Это мои работы. !!!! Оцените масштабы';
     const prase_about__steps = 'Маленькие шаги на пути к большой цели';
     const prase_rates = 'Цены вас приятно удивят. !!!! Смиритесь';
-    const prase_comunication = 'Свяжитесь со мной. !!!! Даже если не хотите связываться.';
+    const prase_comunication = 'Свяжитесь со мной. !!!! Даже если нехотите связываться. !!!! ';
   </script>
 
   <!-- modal -->
@@ -926,7 +926,13 @@
     // // start observing
     // intersectionObserver.observe(element);
 
+    location = ref;
+    return;
+    
     element.scrollIntoView({ behavior: "smooth" });
+    setTimeout(function () {
+      location = ref;
+    }, 500);
     history.pushState({}, null, ref);
     if(params.prase){
       setTimeout(function () {
