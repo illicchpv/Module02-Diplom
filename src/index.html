@@ -910,17 +910,34 @@
   function smoothScroll(params) {
     let e = params.e, focusId = params.focusId;
     e.preventDefault();
-    if(params.prase)
-      onfocus=speakText(params.prase);
     let ref = e.target.getAttribute("href");
     if (ref === null)
       ref = e.target.parentElement.getAttribute("href");
-    document.querySelector(ref).scrollIntoView({ behavior: "smooth" });
+    let element = document.querySelector(ref);
+
+    // const intersectionObserver = new IntersectionObserver((entries) => {
+    //   let [entry] = entries;
+    //   if (entry.isIntersecting) {
+    //     if(params.prase)
+    //       onfocus=speakText(params.prase);
+    //     // setTimeout(() => alert(`${entry.target.id} is visible`), 100)
+    //   }
+    // });
+    // // start observing
+    // intersectionObserver.observe(element);
+
+    element.scrollIntoView({ behavior: "smooth" });
     history.pushState({}, null, ref);
+    if(params.prase){
+      setTimeout(function () {
+        onfocus=speakText(params.prase);
+      }, 600);
+    }
+
     if (focusId)
       setTimeout(function (focusId) {
         document.getElementById(focusId).focus();
-      }, 500, focusId);
+      }, 700, focusId);
   }
 </script>
-</html>
+</html>|
