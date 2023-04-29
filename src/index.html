@@ -910,15 +910,26 @@
   function smoothScroll(params) {
     {
       let e = params.e, focusId = params.focusId;
-      // e.preventDefault();
+      e.preventDefault();
       let ref = e.target.getAttribute("href");
-      if (ref === null)
+      if (ref === null){
         ref = e.target.parentElement.getAttribute("href");
+      }
+      let element = document.querySelector(ref);
+
+      setTimeout(function () {
+        element.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+
       setTimeout(function () {
         location = ref;
       }, 500);
+
+
       return;
     }
+
+
     let e = params.e, focusId = params.focusId;
     e.preventDefault();
     let ref = e.target.getAttribute("href");
