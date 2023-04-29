@@ -1,7 +1,9 @@
 // 050portfolio
 .bg2Box{
   // background-color: red;
-  background-image: url(../images/bg2.svg);
+  // background-image: url(../images/bg2.svg);
+  // background-image: url(../images/bg2_L.svg);
+  background-image: $bgSvg;
   background-size: cover;
   background-position-y: 217px;
 

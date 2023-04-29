@@ -1,61 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
+$propGlob: 0;
 @mixin vVal($prop, $size1, $size2, $val1, $val2){ // мой первый миксин )
   $k: calc(($val1 - $val2) / ($size1 - $size2));
   $v: calc($val1 - (($size1 - 100vw) * $k)); // 
-  // $glob: $v !global;
-  @if $prop == "left" {
-    left: $v;
-  } @else if $prop == "right" {
-    right: $v;
-  } @else if $prop == "top" {
-    top: $v;
-  } @else if $prop == "bottom" {
-    bottom: $v;
-  } @else if $prop == "width" {
-    width: $v;
-  } @else if $prop == "max-width" {
-    max-width: $v;
-  } @else if $prop == "height" {
-    height: $v;
-  } @else if $prop == "font-size" {
-    font-size: $v;
-  }  @else if $prop == "margin-top" {
-    margin-top: $v;
-  }  @else if $prop == "margin-right" {
-    margin-right: $v;
-  }  @else if $prop == "margin-bottom" {
-    margin-bottom: $v;
-  }  @else if $prop == "margin-left" {
-    margin-left: $v;
-  }  @else if $prop == "padding-bottom" {
-    padding-bottom: $v;
-  }  @else if $prop == "padding-left" {
-    padding-left: $v;
-  }  @else if $prop == "padding-right" {
-    padding-right: $v;
-  }  @else if $prop == "padding-top" {
-    padding-top: $v;
-  }  @else if $prop == "min-width" {
-    min-width: $v;
-  }  @else if $prop == "min-height" {
-    min-height: $v;
-  }  @else if $prop == "flex-basis" {
-    flex-basis: $v;
-  }  @else if $prop == "column-gap" {
-    column-gap: $v;
-  }  @else if $prop == "row-gap" {
-    row-gap: $v;
-  }  @else if $prop == "gap" {
-    gap: $v;
-  }  
+  $propGlob: $v !global;
+  #{$prop}: $v;
 }
 
-$bg: #232326; // #232326
-$bgLight: #38383A;
-$txtColor: #F3F2F0;
-$txtHover: #D40000;
-$txtGray: rgba(243, 242, 240, 0.4);
+// // dark theme
+// $bg: #232326; // #232326
+// $bgLight: #38383A;
+// $bgSvg:'../images/bg2.svg';
+// $txtColor: #F3F2F0;
+// $txtHover: #D40000;
+// $txtGray: rgba(243, 242, 240, 0.4);
+// // light theme
+// $bg: #F3F2F0;
+// $bgLight: #E7E6E4;
+// $bgSvg: '../images/bg2_L.svg';
+// $txtColor: #010101;
+// $txtHover: #D40000;
+// $txtGray: #A8A7A6;
+
+// changeble theme
+$bg: var(--bg); // #F3F2F0;
+$bgLight: var(--bgLight); // #E7E6E4;
+$bgSvg: --bgSvg; // '../images/bg2_L.svg';
+$txtColor: var(--txtColor); //  #010101;
+$txtHover: var(--txtHover); //  #D40000;
+$txtGray: var(--txtGray); // #A8A7A6;
+
 $debugBg: transparent; // rgba(darkgrey, .3); //
 $maxwidth: 1140px;
 $padding: 15px;
