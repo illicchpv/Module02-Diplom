@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Module02 | Diplom</title>
 
-  <script> 
+  <script id="appver"> 
     // https://illicchpv.github.io/Module02-Diplom/dist/
-    const version = '430-01-03'; 
+    const version = '430-01-05'; 
   </script>
 
   <!-- <div id="stylesContainer"> -->
-    <style>
+    <style class="appTheme">
       :root{
         --bg: #F3F2F0;
         --bgLight: #E7E6E4;
@@ -22,7 +22,7 @@
         --bgSvg: '../images/bg2_L.svg';
       }
     </style>
-    <style>
+    <style class="appTheme">
       :root{
         --bg: rgb(35, 35, 38); /* #232326; */
         --bgLight: rgb(56, 56, 58); /* #38383A; */
@@ -35,8 +35,13 @@
   <!-- </div> -->
   <script>
     function toggleStyle(){
-      let elem = document.querySelector('#stylesContainer style');
-      document.getElementById("stylesContainer").appendChild(elem);
+      let prev = document.getElementById("appver")
+      let elemArr = document.querySelectorAll('.appTheme');
+      let elem = elemArr[elemArr.length - 1];
+      elem.remove();
+      prev.after(elem);
+      // let elem = document.querySelector('#stylesContainer style');
+      // document.getElementById("stylesContainer").appendChild(elem);
     }
   </script>
 
@@ -83,7 +88,7 @@
         }
         scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-        console.log("store", scrollLeft, scrollTop, window.pageYOffset, document.documentElement.scrollTop)
+        // console.log("store", scrollLeft, scrollTop, window.pageYOffset, document.documentElement.scrollTop)
         // window.scrollTo(0, 0);
          
         // disableScroll()
@@ -104,10 +109,10 @@
         document.body.parentElement.classList.remove("modal__noScroll");
         document.getElementById("modal").style.top = "-2400px";
         document.getElementById("modal-shadow").style.display = "none";
-        console.log("test", scrollLeft, scrollTop, window.pageYOffset, document.documentElement.scrollTop)
-        console.log("set", scrollLeft, scrollTop)
+        // console.log("test", scrollLeft, scrollTop, window.pageYOffset, document.documentElement.scrollTop)
+        // console.log("set", scrollLeft, scrollTop)
         window.scrollTo(scrollLeft, scrollTop);
-        console.log("test", scrollLeft, scrollTop, window.pageYOffset, document.documentElement.scrollTop)
+        // console.log("test", scrollLeft, scrollTop, window.pageYOffset, document.documentElement.scrollTop)
       }
       // function disableScroll() {
       //   // Get the current page scroll position
@@ -216,6 +221,7 @@
       <section class="introduce" id="introduce" style="display:-none;">
         <div class="introduce__PhotoBox">
           <img class="introduce__img" src="images/im.jpg" alt="im"
+            onclick="toggleStyle()" style="cursor: pointer;"
           > <!-- onclick="toggleStyle()" style="cursor: pointer;" -->
         </div>
         <h1 class="introduce__text">
@@ -553,7 +559,7 @@
             </div>
             <div class="tools__gridItem">
               <img class="tools__gridItemImg" src="./images/skills/jquery.svg" alt="jquery">
-              <div class="tooltipInfo">
+              <div class="tooltipInfo tooltipInfo_r">
                 <h3 class="hh">jquery</h3>
                 <div class="tooltipInfo__name">
                   jquery
@@ -601,7 +607,7 @@
             </div>
             <div class="tools__gridItem">
               <img class="tools__gridItemImg" src="./images/skills/wodpress.svg" alt="wodpress">
-              <div class="tooltipInfo">
+              <div class="tooltipInfo tooltipInfo_r">
                 <h3 class="hh">wordpress</h3>
                 <div class="tooltipInfo__name">
                   wodpress
@@ -781,7 +787,11 @@
                       try{
                         document.getElementById('cPhoneMail').placeholder = placeholder;
                         document.getElementById('cPhoneMail').focus();
-                      }catch(e){console.log("cPhoneMail", e)}
+                      }catch(e){console.error("cPhoneMail", e)}
+                    }
+                    function loadVoices() {
+                      var voices = speechSynthesis.getVoices();
+                      console.log("voices:",voices)
                     }
                     function speakPH(el){
                       let placeholder = el.getAttribute("placeholder")
@@ -793,7 +803,7 @@
                       try{
                         let speech = new window.SpeechSynthesisUtterance(); speech.text = txt;
                         window.speechSynthesis.speak(speech);
-                      }catch(e){console.log("speakText", e)}
+                      }catch(e){console.error("speakText", e)}
                     }
                   </script>
                   <!-- Items -->
@@ -862,6 +872,12 @@
     
 <div style="height: 400px; background-color: cadetblue;"></div>
 <script>
+  if ('speechSynthesis' in window) {
+    document.addEventListener('DOMContentLoaded', function() {
+      loadVoices();
+    });
+  }  
+
   { // показываем версию
     // version
     let dtcArr = document.querySelectorAll(".version");
@@ -883,7 +899,7 @@
     let cloneArr = [], targetArr = [];
     dtcArr.forEach(elem => {
       let params  = elem.getAttribute('data-copyContent').split(' ');
-      console.log("params:", params);
+      // console.log("params:", params);
       let modArr = [];
       if(params.length > 2 ){
         for(let i = 2; i<params.length; i++){
@@ -894,7 +910,7 @@
           }
         }
       }
-      console.log("modArr:", modArr);
+      // console.log("modArr:", modArr);
       let mod = params.length > 1 && params[1] && params[1] != '-' ?  params[1].trim() : false;
       let selector = params[0]
       let append = selector.indexOf('+') >= 0;
@@ -960,7 +976,6 @@
 
       return;
     }
-
     // let e = params.e, focusId = params.focusId;
     // e.preventDefault();
     // let ref = e.target.getAttribute("href");
