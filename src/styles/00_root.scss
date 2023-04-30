@@ -135,6 +135,12 @@ body{
   color: $txtColor;
 
 }
+h1,h2,h3{
+  margin: 0;
+  padding: 0;
+}
+
+.hh{ display:none;}
 
 .mainBox{
   background-color: $debugBg; 

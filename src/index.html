@@ -8,7 +8,7 @@
 
   <script> 
     // https://illicchpv.github.io/Module02-Diplom/dist/
-    const version = '429-01-05'; 
+    const version = '430-01-01'; 
   </script>
 
   <div id="stylesContainer">
@@ -212,19 +212,20 @@
   <main>
     <div class="mainBox">
 
+      <!-- introduce -->
       <section class="introduce" id="introduce" style="display:-none;">
         <div class="introduce__PhotoBox">
-          <img class="introduce__img" src="images/im.jpg"  
-              ></img> <!-- onclick="toggleStyle()" style="cursor: pointer;" -->
+          <img class="introduce__img" src="images/im.jpg" alt="im"
+          > <!-- onclick="toggleStyle()" style="cursor: pointer;" -->
         </div>
         <h1 class="introduce__text">
-          <div class="decorV introduce__decor"></div>
-          <div class="introduce__fio">
+          <span class="decorV introduce__decor"></span>
+          <span class="introduce__fio">
             Александр Антропов
-          </div>
-          <div class="introduce__prof">
+          </span>
+          <span class="introduce__prof">
             web-разработчик          
-          </div>
+          </span>
         </h1>
       </section>
 
@@ -232,8 +233,9 @@
 
         <div class="discussion__block1">
 
+          <h2 class="hh">Обсудить проект</h2>
           <button class="btnBlock" type="button" onclick="openModal()">
-            <div class="btnBlock__btnText">Обсудить проект</div>
+            <span class="btnBlock__btnText">Обсудить проект</span>
             <img src="./images/ArrowRight.svg" alt="arrow">
           </button>
           
@@ -281,9 +283,9 @@
 
       <section class="about" style="display:-none;">
         <div class="about__block1">
-          <div class="about__title">
+          <h2 class="about__title">
             Обо мне
-          </div>
+          </h2>
           <div class="about__text">
             Создаю только эффективные решения,
             которые работают на результат:
@@ -343,10 +345,10 @@
 
             <div class="step">
               <div class="step__row">
-                <div class="step__name">
+                <h3 class="step__name">
                   <span class="step__nom">01</span>Вы 
                   заказываете сайт
-                </div>
+                </h3>
                 <div class="step__text">
                   Связываетесь со мной по телефону или через заявку на сайте
                 </div>
@@ -356,10 +358,10 @@
             <!--  -->
             <div class="step">
               <div class="step__row">
-                <div class="step__name">
+                <h3 class="step__name">
                   <span class="step__nom">02</span>Обговариваем 
                   детали
-                </div>
+                </h3>
                 <div class="step__text">
                   Созваниваемся или списываемся любым удобным для вас способом
                 </div>
@@ -369,10 +371,10 @@
             <!--  -->
             <div class="step">
               <div class="step__row">
-                <div class="step__name">
+                <h3 class="step__name">
                   <span class="step__nom">03</span>Этап 
                   программирования
-                </div>
+                </h3>
                 <div class="step__text">
                   Верстаю сайт по вашему проекту пиксель в пиксель
                 </div>
@@ -387,15 +389,17 @@
 
     <div class="bg2Box">
       <div class="mainBox">
+
+        <!-- 05 portfolio -->
         <section class="portfolio" id="portfolio" style="display:-none;">
-          <div class="portfolio__title">
+          <h1 class="portfolio__title">
             Портфолио<i class="decorO decorO_2 portfolio__decorO2"></i>
-          </div>
+          </h1>
           <div class="portfolio__projects">
 
             <div class="portfolio__project">
               <div class="portfolio__pojDecription">
-                <div class="portfolio__pojName">Agata Bielen</div>
+                <h2 class="portfolio__pojName">Agata Bielen</h2>
                 <div class="portfolio__pojStep">– верстка по макету из Figma</div>
                 <div class="portfolio__pojStep">– наполнение сайта контентом</div>
                 <div class="portfolio__pojStep">– внедрена функция добавления видео</div>
@@ -408,7 +412,7 @@
             <div class="hline"></div>
             <div class="portfolio__project">
               <div class="portfolio__pojDecription">
-                <div class="portfolio__pojName">Lemon</div>
+                <h2 class="portfolio__pojName">Lemon</h2>
                 <div class="portfolio__pojStep">– верстка по макету из PSD</div>
                 <div class="portfolio__pojStep">– доступен функционал получения заказов</div>
                 <div class="portfolio__pojStep">– реализована кнопка «Заказать в 1 клик»</div>
@@ -437,9 +441,9 @@
             <div class="benefits__item">
               <img class="benefits__itemIcon" src="./images/c_money.svg" alt="">
               <div class="benefits__itemInfo">
-                <div class="benefits__itemTitle">
+                <h3 class="benefits__itemTitle">
                   Актуальные цены
-                </div>
+                </h3>
                 <div class="benefits__itemText">
                   Ничего лишнего, без переплат,
                   100% отработка ваших денег
@@ -449,9 +453,9 @@
             <div class="benefits__item">
               <img class="benefits__itemIcon" src="./images/c_mount.svg" alt="">
               <div class="benefits__itemInfo">
-                <div class="benefits__itemTitle">
+                <h3 class="benefits__itemTitle">
                   Более 2-х лет опыта 
-                </div>
+                </h3>
                 <div class="benefits__itemText">
                   Это моя основная деятельность,создано более 150+ сайтов
                 </div>
@@ -460,9 +464,9 @@
             <div class="benefits__item">
               <img class="benefits__itemIcon" src="./images/c_clock.svg" alt="">
               <div class="benefits__itemInfo">
-                <div class="benefits__itemTitle">
+                <h3 class="benefits__itemTitle">
                   Оптимальные сроки
-                </div>
+                </h3>
                 <div class="benefits__itemText">
                   Создание сайта любой сложностив самые сжатые сроки
                 </div>
@@ -471,9 +475,9 @@
             <div class="benefits__item">
               <img class="benefits__itemIcon" src="./images/c_phone.svg" alt="">
               <div class="benefits__itemInfo">
-                <div class="benefits__itemTitle">
+                <h3 class="benefits__itemTitle">
                   Всегда на связи
-                </div>
+                </h3>
                 <div class="benefits__itemText">
                   Не теряюсь и не проматываюсроки. Подхожу ответственно
                 </div>
@@ -482,9 +486,9 @@
             <div class="benefits__item">
               <img class="benefits__itemIcon" src="./images/c_json.svg" alt="">
               <div class="benefits__itemInfo">
-                <div class="benefits__itemTitle">
+                <h3 class="benefits__itemTitle">
                   Чистый код
-                </div>
+                </h3>
                 <div class="benefits__itemText">
                   HTML код без всего лишнего, плюсадаптив под все устройства
                 </div>
@@ -493,9 +497,9 @@
             <div class="benefits__item">
               <img class="benefits__itemIcon" src="./images/c_file.svg" alt="">
               <div class="benefits__itemInfo">
-                <div class="benefits__itemTitle">
+                <h3 class="benefits__itemTitle">
                   Поддержка сайта
-                </div>
+                </h3>
                 <div class="benefits__itemText">
                   Быстро устраню любую проблему на вашем сайте
                 </div>
@@ -508,11 +512,13 @@
 
         <!-- 06 tools -->
         <section class="tools" style="display:-none;">
+          <h2 class="hh">tools</h2>
           <div class="tools__grid">
 
             <div class="tools__gridItem">
               <img class="tools__gridItemImg" src="./images/skills/html5.svg" alt="html5">
               <div class="tooltipInfo">
+                <h3 class="hh">HTML5</h3>
                 <div class="tooltipInfo__name">
                   HTML5
                 </div>
@@ -524,6 +530,7 @@
             <div class="tools__gridItem">
               <img class="tools__gridItemImg" src="./images/skills/css.svg" alt="css">
               <div class="tooltipInfo">
+                <h3 class="hh">CSS</h3>
                 <div class="tooltipInfo__name">
                   CSS
                 </div>
@@ -535,6 +542,7 @@
             <div class="tools__gridItem">
               <img class="tools__gridItemImg" src="./images/skills/js.svg" alt="js">
               <div class="tooltipInfo">
+                <h3 class="hh">js</h3>
                 <div class="tooltipInfo__name">
                   js
                 </div>
@@ -546,6 +554,7 @@
             <div class="tools__gridItem">
               <img class="tools__gridItemImg" src="./images/skills/jquery.svg" alt="jquery">
               <div class="tooltipInfo">
+                <h3 class="hh">jquery</h3>
                 <div class="tooltipInfo__name">
                   jquery
                 </div>
@@ -557,6 +566,7 @@
             <div class="tools__gridItem">
               <img class="tools__gridItemImg" src="./images/skills/bootstrap.svg" alt="bootstrap">
               <div class="tooltipInfo">
+                <h3 class="hh">bootstrap</h3>
                 <div class="tooltipInfo__name">
                   bootstrap
                 </div>
@@ -568,6 +578,7 @@
             <div class="tools__gridItem">
               <img class="tools__gridItemImg" src="./images/skills/php.svg" alt="php">
               <div class="tooltipInfo">
+                <h3 class="hh">php</h3>
                 <div class="tooltipInfo__name">
                   php
                 </div>
@@ -579,6 +590,7 @@
             <div class="tools__gridItem">
               <img class="tools__gridItemImg" src="./images/skills/vue.svg" alt="vue">
               <div class="tooltipInfo">
+                <h3 class="hh">vue</h3>
                 <div class="tooltipInfo__name">
                   vue
                 </div>
@@ -590,6 +602,7 @@
             <div class="tools__gridItem">
               <img class="tools__gridItemImg" src="./images/skills/wodpress.svg" alt="wodpress">
               <div class="tooltipInfo">
+                <h3 class="hh">wordpress</h3>
                 <div class="tooltipInfo__name">
                   wodpress
                 </div>
@@ -606,9 +619,9 @@
         <!-- 07 rates -->
         <section class="rates" id="rates" style="display:-none;">
           <div class="rates__titleBox">
-            <div class="rates__title">
+            <h2 class="rates__title">
               <i class="decorO decorO_3 rates__decorO3"></i>тарифы
-            </div>
+            </h2>
             <div class="rates__text">
               Представленные ниже цены зависят
               не только от того какой сайт вы хотите. 
@@ -621,9 +634,9 @@
           <!-- 1 -->
           <div class="rates__itemBox">
             <div class="rates__itemLeft" data-copyContent=".btnBlock+ btnBlock_rates"><!--+-->
-              <div class="rates__itemLeftTitl">
+              <h3 class="rates__itemLeftTitl">
                 Разработка лэндинга или сайт визитки
-              </div>
+              </h3>
               <div class="rates__itemLeftText">
                 Небольшой сайт состоящий из одной страницы
               </div>
@@ -654,9 +667,9 @@
           <!-- 2 -->
           <div class="rates__itemBox">
             <div class="rates__itemLeft" data-copyContent=".btnBlock+ btnBlock_rates"><!--+-->
-              <div class="rates__itemLeftTitl">
+              <h3 class="rates__itemLeftTitl">
                 Разработка корпоративного  сайта
-              </div>
+              </h3>
               <div class="rates__itemLeftText">
                 Небольшой сайт с n-количеством страниц
               </div>
@@ -687,9 +700,9 @@
           <!-- 3 -->
           <div class="rates__itemBox">
             <div class="rates__itemLeft" data-copyContent=".btnBlock+ btnBlock_rates"><!--+-->
-              <div class="rates__itemLeftTitl">
+              <h3 class="rates__itemLeftTitl">
                 Разработка интернет - магазина
-              </div>
+              </h3>
               <div class="rates__itemLeftText">
                 Полноценный каталог вашей продукции
               </div>
@@ -725,11 +738,11 @@
           <div class="comunication__block">
             <div class="comunication__title">
               <h1 class="comunication__text">
-                <div class="decorV decorV_2 comunication__decor"></div>
-                <div class="comunication__textLine">
+                <span class="decorV decorV_2 comunication__decor"></span>
+                <span class="comunication__textLine">
                   Расскажите
                   <br>о своем проекте
-                </div>
+                </span>
               </h1>
             </div>
 
@@ -805,7 +818,7 @@
         <div class="hline"></div>
 
         <!-- 09 footer -->
-        <section class="footer" data-copyContent=".hmenu hmenu_footer" style="display:-none;"><!--+-->
+        <footer class="footer" data-copyContent=".hmenu hmenu_footer" style="display:-none;"><!--+-->
 
           <div class="footer__mobMenu">
             <div class="footer__mmLine1">
@@ -840,7 +853,7 @@
             </p>
           </div>
           
-        </section>
+        </footer>
 
       </div><!-- /mainBox --> 
     </div>

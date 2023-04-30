@@ -164,6 +164,7 @@
   }
   &__name{
     @include fs28r;
+    width: 45%;
 
     @media (max-width: 1024px){
       @include vVal(font-size, 1024px, 360px, 28px, 16px);
