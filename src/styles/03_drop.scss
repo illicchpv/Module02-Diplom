@@ -42,7 +42,7 @@ $lrPadding: 20px;
     // padding-left: 7px;
     background: $bgLight;
     // border-radius: 4px;  
-    transition: all .3s ease;
+    transition: all $transitionTime ease;
     box-sizing: border-box;
 
     @media (max-width: 768px){
@@ -67,7 +67,7 @@ $lrPadding: 20px;
       background-repeat:no-repeat;
       background-position: center;
       background-size: contain;      
-      transition: transform .3s ease;
+      transition: transform $transitionTime ease;
       position: absolute;
       right: $lrPadding;
       top: 40%;
@@ -81,7 +81,7 @@ $lrPadding: 20px;
     width: 100%;
     padding:0;
     margin:0;
-    transition: all .3s ease;    
+    transition: all $transitionTime ease;    
     background: $bgLight; // #fff;   
     // box-shadow: 0 2px 6px rgba(0,0,0,.15);
     border-radius: 4px;
@@ -100,7 +100,7 @@ $lrPadding: 20px;
         padding: .6rem;
         padding-left: $lrPadding;
 
-        transition: all .3s ease;
+        transition: all $transitionTime ease;
         @media (hover: hover) {
           &:hover{
             // background: #eee;
@@ -161,7 +161,7 @@ $lrPadding: 20px;
   right: 0;
   z-index: 100;
 
-  transition: top 0.3s;
+  transition: top $transitionTime;
 
   @media (max-height: 620px) {
     overflow: auto;
@@ -226,7 +226,7 @@ $lrPadding: 20px;
 // background: #121213;
 // opacity: 0.6;
 .burgerMenu{
-  background: rgba(#121213, .6);
+  background: $bgBurger;
   position: fixed;
   top: 0;
   top: -2400px;
@@ -236,7 +236,7 @@ $lrPadding: 20px;
   z-index: 100;
   overflow-y: auto;
 
-  transition: top 0.3s;
+  transition: top $transitionTime;
 
   & .hline{
     background-color: rgba($txtColor, 0.2);

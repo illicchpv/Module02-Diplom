@@ -45,7 +45,7 @@
     @media (max-width: 1200px){
       &:after {
         border: 20px solid transparent;
-        border-bottom: 45px solid white;
+        border-bottom: 45px solid $decorVColor;
         left: 90px;
         top: 202px;
       }

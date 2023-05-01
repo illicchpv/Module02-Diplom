@@ -43,7 +43,7 @@
       text-decoration: none;
       color: rgba($txtColor, 0.3);
       border-bottom: 1px solid rgba($txtColor, 0.3);
-      transition: all 0.7s;
+      transition: all $transitionTime;
     }
     &:hover a {
       color: $txtColor;

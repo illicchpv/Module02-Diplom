@@ -2,7 +2,7 @@
 .decorO{
   width: 108px;
   height: 108px;
-  background-color: $txtHover;
+  background-color: $decorOColor;
   border-radius: 50%;
   position: absolute;
   z-index: -1;
@@ -60,14 +60,14 @@
 .decorV{
   width: 253px;
   height: 253px;
-  background-color: $txtHover;
+  background-color: $decorOColor;
   border-radius: 50%;
   position: relative;
   &:after{
     content: "";
     position: absolute;
     border: 30px solid transparent;
-    border-bottom: 70px solid white;
+    border-bottom: 70px solid $decorVColor;
     top: 100px;
     left: 100px;
     left: -19px;
@@ -181,7 +181,7 @@
     width: 0%;
     height: 2px;
     background-color: $txtColor;
-    transition: width .3s ease-out;
+    transition: width $transitionTime ease-out;
   }
   &:hover::before {
     width: 100%;
