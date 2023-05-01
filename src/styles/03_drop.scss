@@ -22,7 +22,6 @@ $lrPadding: 20px;
       }
       ~.drop__control{       
         z-index:99;
-        // box-shadow:0 0 0 2px lighten($bgLight, 20);
         &:after{transform: rotate(180deg);}
       }
       ~.drop__closeOverlay{
@@ -153,7 +152,7 @@ $lrPadding: 20px;
 .modal{
   max-width: 600px;
   // min-height: 570px;
-  background-color: rgba($bg, 1);
+  background-color: $bg;
 
   margin: 35px auto 0;
   position: fixed;
@@ -240,7 +239,7 @@ $lrPadding: 20px;
   transition: top 0.3s;
 
   & .hline{
-    color: rgba($txtColor, 0.2);
+    background-color: rgba($txtColor, 0.2);
   }
 
   &__box{

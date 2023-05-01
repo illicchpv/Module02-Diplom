@@ -8,10 +8,18 @@ $propGlob: 0;
   #{$prop}: $v;
 }
 
+@function rrgba($p) {
+  @return rgba(var(--#{$p}), 0.1);
+}
 // @function rgb($args...) { @return #{'rgb(#{$args})'}; } 
 // @function rgba($args...) { @return #{'rgba(#{$args})'}; } 
 // @function hsl($args...) { @return #{'hsl(#{$args})'}; } 
 // @function hsla($args...) { @return #{'hsla(#{$args})'}; }
+
+// $bg: rgba(var(--bg), 1); // rrgba(bg)
+// $bgLight: rrgba(bgLight); // 
+// $txtColor: rrgba(txtColor); // 
+
 
 // dark theme
 $bg: rgb(35, 35, 38); // #232326; // #232326
@@ -30,6 +38,15 @@ $bgSvg:'../images/bg2.svg';
 // $bgSvg: '../images/bg2_L.svg';
 
 // // changeble theme
+// $bg: var(--bg);
+// $bgLight: var(--bgLight); // #E7E6E4;
+// $txtColor: var(--txtColor);
+// // $txtColor: #F3F2F0;
+// $txtColor_2: var(--txtColor_2);
+// $txtHover: var(--txtHover);
+// $txtGray: var(--txtGray);
+// $bgSvg: --bgSvg; // '../images/bg2_L.svg';
+
 // $bg: var(--bg); // #F3F2F0;
 // $bgLight: var(--bgLight); // #E7E6E4;
 // $txtColor: var(--txtColor); //  #010101;

@@ -89,11 +89,9 @@
   display: block;
   width: 100%;
   height: 1px;
-  background-color: rgba($txtColor, 1);
-  // background-color: $txtColor; opacity: 1;
+  background-color: $txtColor;
   &_02{ // in burger
     background-color: rgba($txtColor, .2);
-    // background-color: $txtColor; opacity: .2;
   }
 }
 
@@ -103,11 +101,9 @@
   width: 1px;
   height: 100%;
   background-color: rgba($txtColor, .5);
-  // background-color: $txtColor; opacity: .5;
 
   &_burgerMenu{ // in burger phone | email
     background-color: rgba($txtColor, .2);
-    // background-color: $txtColor; opacity: .2;
   }
 }
 
@@ -184,7 +180,7 @@
     left: 0;
     width: 0%;
     height: 2px;
-    background-color: rgba($txtColor, 1);
+    background-color: $txtColor;
     transition: width .3s ease-out;
   }
   &:hover::before {

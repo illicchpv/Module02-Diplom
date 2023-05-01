@@ -25,22 +25,44 @@
       :root{
         --bg: #F3F2F0;
         --bgLight: #E7E6E4;
-        --txtColor: #010101;
+        --txtColor: #010101; 
+        --txtColor_2: #cccccc; /* rgba(#010101, .2); */
         --txtHover: #D40000;
-        --txtGray: #A8A7A6;
+        --txtGray: #A8A7A6; 
         --bgSvg: '../images/bg2_L.svg';
       }
     </style>
     <style class="appTheme">
       :root{
-        --bg: rgb(35, 35, 38); /* #232326; */
-        --bgLight: rgb(56, 56, 58); /* #38383A; */
-        --txtColor:  rgb(243, 242, 240); /* #F3F2F0; */
-        --txtHover: rgb(212, 0, 0); /* #D40000; */
-        --txtGray: rgba(243, 242, 240, 0.4);
+        --bg: #232326;
+        --bgLight: #38383A;
+        --txtColor:  #F3F2F0;
+        --txtColor_2: #fdfcfc;
+        --txtHover: #D40000;
+        --txtGray: #747475;
         --bgSvg: url(../images/bg2.svg);
       }
     </style>
+    <!-- <style class="appTheme">
+      :root{
+        --bg: 243, 242, 240; /*  #F3F2F0; rgb(243, 242, 240); */
+        --bgLight: 231, 230, 228; /*  #E7E6E4; rgb(231, 230, 228); */
+        --txtColor: 1, 1, 1; /*  #010101; rgb(1, 1, 1); */
+        --txtHover: 212, 0, 0; /*  #D40000; rgb(212, 0, 0); */
+        --txtGray: 168, 167, 166;  /* #A8A7A6; rgb(168, 167, 166); */
+        --bgSvg: '../images/bg2_L.svg';
+      }
+    </style>
+    <style class="appTheme">
+      :root{
+        --bg: 35, 35, 38; /* rgb(35, 35, 38); #232326; */
+        --bgLight: 56, 56, 58; /* rgb(56, 56, 58); #38383A; */
+        --txtColor:  243, 242, 240; /* rgb(243, 242, 240); #F3F2F0; */
+        --txtHover: 212, 0, 0; /* rgb(212, 0, 0); #D40000; */
+        --txtGray: 116, 116, 117; /* rgba(243, 242, 240, 0.4); rgb(116, 116, 117); #747475 */
+        --bgSvg: url(../images/bg2.svg);
+      }
+    </style> -->
   <!-- </div> -->
   <script>
     function toggleStyle(){
@@ -230,6 +252,7 @@
       <section class="introduce" id="introduce" style="display:-none;">
         <div class="introduce__PhotoBox">
           <img class="introduce__img" src="images/im.jpg" alt="im"
+          onclick="toggleStyle()" style="cursor: pointer;"
           > <!-- onclick="toggleStyle()" style="cursor: pointer;" -->
         </div>
         <h1 class="introduce__text">
