@@ -83,7 +83,7 @@ $lrPadding: 20px;
     margin:0;
     transition: all .3s ease;    
     background: $bgLight; // #fff;   
-    box-shadow: 0 2px 6px rgba(0,0,0,.15);
+    // box-shadow: 0 2px 6px rgba(0,0,0,.15);
     border-radius: 4px;
     overflow:hidden;
     max-height:0;
@@ -160,13 +160,13 @@ $lrPadding: 20px;
   left: 0;
   right: 0;
   z-index: 100;
-  max-height: calc(100vh - 90px);
-  overflow: auto;
 
   transition: top 0.3s;
 
   @media (max-height: 620px) {
+    overflow: auto;
     margin-top: 10px;
+    max-height: calc(100vh - 30px);
   }
   @media (max-width: 640px) {
     max-width: 360px;
@@ -209,7 +209,7 @@ $lrPadding: 20px;
 
   &__shadow{
     display: none;
-    background-color:rgba(black, .5);
+    background-color:rgba($bg, .1);
     position: fixed;
     left: 0;
     right: 0;
@@ -226,7 +226,7 @@ $lrPadding: 20px;
 // background: #121213;
 // opacity: 0.6;
 .burgerMenu{
-  background: rgba(#121213, 1.6) ;
+  background: rgba(#121213, .6);
   position: fixed;
   top: 0;
   top: -2400px;
@@ -254,7 +254,7 @@ $lrPadding: 20px;
     box-sizing: border-box;
   }
   &__bg{
-    background: #232326;
+    background: $bg;
   }
   &__close{
     position: absolute;

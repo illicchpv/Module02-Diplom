@@ -121,7 +121,7 @@
   color: rgba($txtColor, 0.8);
   font-weight: 500;
   text-align: center;
-  background-color: rgba($txtHover, 1);
+  background-color: $txtHover;
   box-sizing: border-box;
   padding: 27px 15px;
   top: 140px;

@@ -46,8 +46,8 @@
       transition: all 0.7s;
     }
     &:hover a {
-      color: rgba($txtColor, 1);
-      border-bottom: 1px solid rgba($txtColor, 1);
+      color: $txtColor;
+      border-bottom: 1px solid $txtColor;
     }
   }
 

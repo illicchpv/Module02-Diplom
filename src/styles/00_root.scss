@@ -22,11 +22,11 @@ $propGlob: 0;
 
 
 // dark theme
-$bg: rgb(35, 35, 38); // #232326; // #232326
+$bg: rgb(35, 35, 38); // #232326;
 $bgLight: rgb(56, 56, 58); //  #38383A;
 $txtColor: rgb(243, 242, 240); //  #F3F2F0;
 $txtHover: rgb(212, 0, 0); //  #D40000;
-$txtGray: rgba(243, 242, 240, 0.4); //  rgba(243, 242, 240, 0.4);
+$txtGray: rgba(243, 242, 240, 0.4); //
 $bgSvg:'../images/bg2.svg';
 
 // // light theme
@@ -56,7 +56,6 @@ $bgSvg:'../images/bg2.svg';
 
 // $txtColor: #F3F2F0;
 
-$debugBg: transparent; // rgba(darkgrey, .3); //
 $maxwidth: 1140px;
 $padding: 15px;
 $rpart: 560px;
@@ -160,8 +159,6 @@ h1,h2,h3{
 .hh{ display:none;}
 
 .mainBox{
-  background-color: $debugBg; 
-
   max-width: $maxwidth;
   margin: 0 auto;
   padding-left: $padding;
