@@ -33,14 +33,14 @@ $lrPadding: 20px;
   
   .drop__control{
     position:relative;
-    color: $txtColor; // #fff;
+    color: rrgba(txtColor);  //  $txtColor; // #fff;
     // display:inline-block;
     display: block;
     cursor: pointer;
     // padding:.8em 1.2em;
     padding: 23px $lrPadding;
     // padding-left: 7px;
-    background: $bgLight;
+    background: rrgba(bgLight); // $bgLight;
     // border-radius: 4px;  
     transition: all $transitionTime ease;
     box-sizing: border-box;
@@ -63,7 +63,7 @@ $lrPadding: 20px;
       // background-image: url("data:image/svg+xml,%3Csvg fill='%23fff' xmlns='http://www.w3.org/2000/svg' width='16' height='13.838' viewBox='0 0 16 13.838'%3E%3Cpath d='M15.78,12.753a1.529,1.529,0,0,1-1.311,2.314H1.53A1.529,1.529,0,0,1,.219,12.753L6.69,1.969a1.528,1.528,0,0,1,2.619,0L15.78,12.753Z' transform='translate(16 15.067) rotate(180)'/%3E%3C/svg%3E%0A");
       width: 15px;
       height: 8px;
-      background-image: url(../images/ArrowDn.svg);
+      background-image: rurl(ArrowDnSvg); // url($ArrowDn);
       background-repeat:no-repeat;
       background-position: center;
       background-size: contain;      
@@ -82,7 +82,7 @@ $lrPadding: 20px;
     padding:0;
     margin:0;
     transition: all $transitionTime ease;    
-    background: $bgLight; // #fff;   
+    background: rrgba(bgLight); // $bgLight; // #fff;   
     // box-shadow: 0 2px 6px rgba(0,0,0,.15);
     border-radius: 4px;
     overflow:hidden;
@@ -95,7 +95,7 @@ $lrPadding: 20px;
       a{        
         display:block;
         // width: 100%;
-        color: $txtGray; // $txtColor; // #555;
+        color: rrgba(txtGray); // $txtGray; // $txtColor; // #555;
         text-decoration: none;
         padding: .6rem;
         padding-left: $lrPadding;
@@ -104,7 +104,7 @@ $lrPadding: 20px;
         @media (hover: hover) {
           &:hover{
             // background: #eee;
-            color: $txtColor;
+            color: rrgba(txtColor);  //  $txtColor;
           }          
         }
       }
@@ -130,7 +130,7 @@ $lrPadding: 20px;
   }
 }
 .drop .drop__items li.itemSelected a{
-  color: $txtColor; // !important;
+  color: rrgba(txtColor);  //  $txtColor; // !important;
 }
 
 
@@ -152,7 +152,7 @@ $lrPadding: 20px;
 .modal{
   max-width: 600px;
   // min-height: 570px;
-  background-color: $bg;
+  background-color: rrgba(bg); // $bg;
 
   margin: 35px auto 0;
   position: fixed;
@@ -209,7 +209,7 @@ $lrPadding: 20px;
 
   &__shadow{
     display: none;
-    background-color:rgba($bg, .1);
+    background-color: rrgba(bg, .1); //rgba($bg, .1);
     position: fixed;
     left: 0;
     right: 0;
@@ -226,7 +226,7 @@ $lrPadding: 20px;
 // background: #121213;
 // opacity: 0.6;
 .burgerMenu{
-  background: $bgBurger;
+  background: rrgba(bgBurger, .6); // rgba($bgBurger, .6);
   position: fixed;
   top: 0;
   top: -2400px;
@@ -239,7 +239,7 @@ $lrPadding: 20px;
   transition: top $transitionTime;
 
   & .hline{
-    background-color: rgba($txtColor, 0.2);
+    background-color: rrgba(txtColor, .2);  // rgba($txtColor, 0.2);
   }
 
   &__box{
@@ -254,7 +254,7 @@ $lrPadding: 20px;
     box-sizing: border-box;
   }
   &__bg{
-    background: $bg;
+    background: rrgba(bg); // $bg;
   }
   &__close{
     position: absolute;
@@ -277,7 +277,7 @@ $lrPadding: 20px;
     // pointer-events:initial;
 
     &:hover{
-      color: $txtHover;
+      color: rrgba(txtHover); // $txtHover;
     }
   }
   &__bottom{

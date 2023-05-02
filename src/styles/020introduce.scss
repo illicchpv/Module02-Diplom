@@ -45,7 +45,7 @@
     @media (max-width: 1200px){
       &:after {
         border: 20px solid transparent;
-        border-bottom: 45px solid $decorVColor;
+        border-bottom: 45px solid rrgba(decorVColor); // $decorVColor;
         left: 90px;
         top: 202px;
       }

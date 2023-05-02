@@ -2,6 +2,7 @@
 .helper01{
   @include fs28b;
   display: flex;
+  align-items: center;
   gap: 30px;
   padding: 10px 30px;
   border-top: none;
@@ -10,3 +11,51 @@
   & a{    color: chocolate;  }
 }
 
+// :root{
+//   --bgSvg: url(../images/bg2.svg);
+//   --ArrowRightSvg: url(../images/ArrowRight.svg);
+//   --ArrowDn: url(../images/ArrowDn.svg);
+// }
+
+.bl1{
+  width: 100px;  height: 50px;
+  background-color: yellow;
+  background-image: url(../images/bg2.svg?v4);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.bl11{
+  width: 100px;  height: 50px;
+  background-color: darkblue;
+  // background-image: url(../images/bg2_L.svg?v4);
+  background-image: rurl(bgSvg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.bl2{
+  width: 100px;  height: 50px;
+  background-color: darkcyan;
+  background-image: url(../images/ArrowRight.svg?v4);
+  background-size: contain;
+}
+.bl21{
+  width: 100px;
+  height: 50px;
+  background-color: wheat;
+  // background-image: url(../images/ArrowRight_L.svg?v4);
+  background-image: rurl(ArrowRightSvg);
+  background-size: contain;
+}
+.bl3{
+  width: 100px;  height: 50px;
+  background-color: black;
+  background-image: url(../images/ArrowDn.svg?v4);
+  background-size: cover;
+}
+.bl31{
+  width: 100px;  height: 50px;
+  background-color: lightgray;
+  // background-image: url(../images/ArrowDn_L.svg?v4);
+  background-image: rurl(ArrowDnSvg);
+  background-size: cover;
+}

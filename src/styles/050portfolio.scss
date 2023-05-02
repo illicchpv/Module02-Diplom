@@ -3,7 +3,7 @@
   // background-color: red;
   // background-image: url(../images/bg2.svg);
   // background-image: url(../images/bg2_L.svg);
-  background-image: $bgSvg;
+  background-image: rurl(bgSvg); // $bgSvg;
   background-size: cover;
   background-position-y: 217px;
 
@@ -90,7 +90,7 @@
     margin-top: 15px;
     // margin-top: 12px;
     @include fs16r;
-    color: rgba($txtColor, .8);
+    color: rrgba(txtColor, .8);  // rgba($txtColor, .8);
 
     @media (max-width: 1140px){
       @include vVal(margin-top, 1140px, 360px, 15px, 10px);
@@ -103,7 +103,7 @@
   &__pojTime{
     margin-top: 40px;
     @include fs16r;
-    color: rgba($txtColor, .8);
+    color: rrgba(txtColor, .8);  // rgba($txtColor, .8);
     font-weight: 700;
 
     @media (max-width: 1140px){

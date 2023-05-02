@@ -7,7 +7,7 @@
     justify-content: space-between;
     padding-bottom: 7.4rem;
     @include fs12r;    
-    color: rgba($txtColor, 0.3);
+    color: rrgba(txtColor, .3);  // rgba($txtColor, 0.3);
 
     @media (max-width: 768px){
       margin-top: 30px;
@@ -33,7 +33,7 @@
   // footer__author
   &__author {
     @include fs12r;
-    color: rgba($txtColor, 0.3);
+    color: rrgba(txtColor, .3);  // rgba($txtColor, 0.3);
 
     @media (max-width: 768px){
       @include vVal(font-size, 768px, 360px, 12px, 10px);
@@ -41,13 +41,13 @@
 
     a {
       text-decoration: none;
-      color: rgba($txtColor, 0.3);
-      border-bottom: 1px solid rgba($txtColor, 0.3);
+      color: rrgba(txtColor, .3);  // rgba($txtColor, 0.3);
+      border-bottom: 1px solid  rrgba(txtColor, .3);  //rgba($txtColor, 0.3);
       transition: all $transitionTime;
     }
     &:hover a {
-      color: $txtColor;
-      border-bottom: 1px solid $txtColor;
+      color: rrgba(txtColor);  // $txtColor;
+      border-bottom: 1px solid  rrgba(txtColor);  //$txtColor;
     }
   }
 

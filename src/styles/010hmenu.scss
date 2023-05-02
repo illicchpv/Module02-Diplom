@@ -42,7 +42,7 @@
       text-decoration: none;
 
       &:hover{
-        color: $txtHover;
+        color: rrgba(txtHover); // $txtHover;
       }
     }
   }

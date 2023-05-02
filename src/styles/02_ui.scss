@@ -1,8 +1,8 @@
 .ddbox{
   padding: 50px 30px;
   width: 400px;
-  background-color: $bg; // aliceblue;
-  color: $txtColor; // black;
+  background-color: rrgba(bg); // $bg; // aliceblue;
+  color: rrgba(txtColor);  // $txtColor; // black;
 
   // min-height: 30px;
   // background-color: bisque;

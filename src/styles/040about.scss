@@ -40,7 +40,7 @@
     max-width: $rpart;
     flex-shrink: 1;
     @include fs28r;
-    color: rgba($txtColor, .8);
+    color: rrgba(txtColor, .8);  //  rgba($txtColor, .8);
 
     @media (max-width: 1120px){
       max-width: calc(50% - 5px);
@@ -134,7 +134,7 @@
   &__propText{
     margin-top: 20px;
     @include fs14r;
-    color: rgba($txtColor, .8);
+    color: rrgba(txtColor, .8);  // rgba($txtColor, .8);
 
     @media (max-width: 1024px){
       @include vVal(font-size, 1024px, 360px, 14px, 10px);
@@ -187,7 +187,7 @@
   }
   &__text{
     @include fs16r;
-    color: rgba($txtColor, .8);
+    color: rrgba(txtColor, .8);  // rgba($txtColor, .8);
     flex-basis: calc($rpart);
     max-width: calc($rpart);
 

@@ -52,7 +52,7 @@
 
       &:after{
         border: 15px solid transparent;
-        border-bottom: 32px solid $decorVColor;
+        border-bottom: 32px solid rrgba(decorVColor); // $decorVColor;
         left: 148px;
         top: -12px;
       }
@@ -143,9 +143,9 @@
     margin-bottom: 20px;
 
     @include fs12r;
-    background-color: $bgLight;
+    background-color: rrgba(bgLight); // $bgLight;
     border: none;
-    color: $txtGray;
+    color: rrgba(txtGray); // $txtGray;
     // font-size: 16px;
     // border: 1px solid black;
     // border-radius: 2rem;
@@ -158,7 +158,7 @@
     &:focus{
       // border: 1px solid black;
       outline: none;
-      color: $txtColor;
+      color: rrgba(txtColor);  // $txtColor;
     }
     // &:invalid{
     //   border: 1px solid red;
@@ -174,11 +174,12 @@
     margin-top: 40px;
     display: block;
     border: none;
-    background-color: $txtHover;
+    background-color: rrgba(txtHover); // $txtHover;
     @include fs16r;
     font-weight: 700;
     padding: 20px;
     width: 100%;
+    color: rrgba(txtBtnColor);
 
     @media (max-width: 768px){
       margin-top: 15px;

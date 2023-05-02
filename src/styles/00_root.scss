@@ -8,8 +8,11 @@ $propGlob: 0;
   #{$prop}: $v;
 }
 
-@function rrgba($p) {
-  @return rgba(var(--#{$p}), 0.1);
+@function rrgba($p, $o: 1) {
+  @return rgba(var(--#{$p}), $o); // red($hex); //, green($hex), blue($hex);
+}
+@function rurl($p) {
+  @return var(--#{$p}); // var(--ArrowRightSvg);
 }
 // @function rgb($args...) { @return #{'rgb(#{$args})'}; } 
 // @function rgba($args...) { @return #{'rgba(#{$args})'}; } 
@@ -20,18 +23,19 @@ $propGlob: 0;
 // $bgLight: rrgba(bgLight); // 
 // $txtColor: rrgba(txtColor); // 
 
-
 // dark theme
-$bg: rgb(35, 35, 38); // #232326;
-$bgLight: rgb(56, 56, 58); //  #38383A;
-$bgBurger:  rgba(#121213, .6); // 
-$txtColor: rgb(243, 242, 240); //  #F3F2F0;
-$txtHover: rgb(212, 0, 0); //  #D40000;
-$txtGray: rgba(243, 242, 240, 0.4); //
-$decorOColor: rgb(212, 0, 0);
-$decorVColor: #fff;
-$tooltipColor: rgb(212, 0, 0);
-$bgSvg:'../images/bg2.svg';
+// $bg: rgb(35, 35, 38); // #232326;
+// $bgLight: rgb(56, 56, 58); //  #38383A;
+// $bgBurger: rgb(18, 18, 19); // rgba(#121213, .6); // 
+// $txtColor: rgb(243, 242, 240); //  #F3F2F0;
+// $txtHover: rgb(212, 0, 0); //  #D40000;
+// $txtGray:  rgb(116, 116, 117); // rgba(243, 242, 240, 0.4); // цвет не выбранных выпадающих елементов меню, текст в не выбранном инпуте
+// $decorOColor: rgb(212, 0, 0);
+// $decorVColor: rgb(255, 255, 255);
+// $tooltipColor: rgb(212, 0, 0);
+// $bgSvg:'../images/bg2.svg';
+// $ArrowRightSvg: '../images/ArrowRight.svg';
+// $ArrowDn: '../images/ArrowDn.svg';
 
 // // light theme
 // $bg: #F3F2F0;
@@ -66,42 +70,42 @@ $rpart: 560px;
 $gap4c: 10px;
 
 @mixin fs74b{
-  color: $txtColor;
+  color: rrgba(txtColor);  // $txtColor;
   font-size: 74px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
 @mixin fs42r{
-  color: $txtColor;
+  color: rrgba(txtColor);  //  $txtColor;
   font-size: 42px;
   font-weight: 400;
   letter-spacing: 0.02em;
   line-height: 1.5;
 }
 @mixin fs28b{
-  color: $txtColor;
+  color: rrgba(txtColor);  //  $txtColor;
   font-size: 28px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.7px;
 }
 @mixin fs28r{
-  color: $txtColor;
+  color: rrgba(txtColor);  //  $txtColor;
   font-size: 28px;
   font-weight: 400;
   letter-spacing: 0.009px;
   line-height: 1.5;
 }
 @mixin fs26r{
-  color: $txtColor;
+  color: rrgba(txtColor);  //  $txtColor;
   font-size: 26px;
   font-weight: 400;
   letter-spacing: 0.009px;
   line-height: 1.5;
 }
 @mixin fs22b{
-  color: $txtColor;
+  color: rrgba(txtColor);  //  $txtColor;
   font-size: 28px;
   font-weight: 700;
   text-transform: uppercase;
@@ -109,35 +113,35 @@ $gap4c: 10px;
   line-height: 1.5;
 }
 @mixin fs16b{
-  color: $txtColor;
+  color: rrgba(txtColor);  //  $txtColor;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 @mixin fs16r{
-  color: $txtColor;
+  color: rrgba(txtColor);  //  $txtColor;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5;
 }
 @mixin fs14r{
-  color: $txtColor;
+  color: rrgba(txtColor);  //  $txtColor;
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5;
 }
 @mixin fs12r{
-  color: $txtColor;
+  color: rrgba(txtColor);  //  $txtColor;
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5;
 }
 @mixin fs10r{
-  color: $txtColor;
+  color: rrgba(txtColor);  //  $txtColor;
   font-size: 10px;
   font-weight: 400;
   letter-spacing: 0;
@@ -151,8 +155,8 @@ html{
 body{
   font-size: 1.6rem;
   font-family: 'Inter', sans-serif;
-  background-color: $bg;
-  color: $txtColor;
+  background-color: rrgba(bg); // $bg;
+  color: rrgba(txtColor);  //  $txtColor;
 
 }
 h1,h2,h3{

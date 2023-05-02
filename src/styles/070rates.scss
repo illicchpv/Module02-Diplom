@@ -51,7 +51,7 @@
     flex-basis: calc($rpart);
     max-width: calc($rpart);
     @include fs28r;
-    color: rgba($txtColor, .8);
+    color: rrgba(txtColor, .8);  // rgba($txtColor, .8);
 
     @media (max-width: 1120px){
       flex-basis: calc(50% - 5px);
@@ -102,7 +102,7 @@
     margin-top: 20px;
     @include fs16r;
     font-weight: 500;
-    color: rgba($txtColor, 0.8);
+    color: rrgba(txtColor, .8);  // rgba($txtColor, 0.8);
 
     @media (max-width: 1024px){
       @include vVal(font-size, 1024px, 360px, 28px, 10px);
@@ -116,12 +116,12 @@
     background-color: transparent;
     border: none;
     padding: 0;
-    color: $txtColor;
+    color: rrgba(txtColor);  // $txtColor;
     cursor: pointer;
     border-bottom: 1px solid transparent;
 
     &:hover{
-      border-bottom: 1px solid $txtColor;
+      border-bottom: 1px solid  rrgba(txtColor);  //$txtColor;
     }
   }
 
@@ -155,7 +155,7 @@
   &__itemRightText{
     margin-top: 10px;
     @include fs16r;
-    color: rgba($txtColor, 0.8);
+    color: rrgba(txtColor, .8);  // rgba($txtColor, 0.8);
 
     @media (max-width: 1024px){
       @include vVal(font-size, 1024px, 360px, 16px, 12px);
