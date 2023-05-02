@@ -17,52 +17,56 @@
 
   <script id="appver"> 
     // https://illicchpv.github.io/Module02-Diplom/dist/
-    const version = '502-01-02'; 
+    const version = '502-01-03'; 
   </script>
-  <style class="appTheme appTheme_light">
-    :root{
-      --bg: 243, 242, 240;
-      --bgLight: 231, 230, 228;
-      --txtColor:  1, 1, 1;
-      --txtBtnColor:  243, 242, 240;
-      --txtHover: 212, 0, 0;
-      --txtGray: 168, 167, 166;
-      --decorOColor: 255, 255, 255;
-      --decorVColor: 212, 0, 0;
-      --tooltipColor: 212, 0, 0;
-
-      --bgSvg: url(../images/bg2_L.svg?v4);
-      --ArrowRightSvg: url(../images/ArrowRight_L.svg?v4);
-      --ArrowDnSvg: url(../images/ArrowDn_L.svg?v4);
-    }
-  </style>
-  <style class="appTheme appTheme_dark">
-    :root{
-      --bg: 35, 35, 38;
-      --bgLight: 56, 56, 58;
-      --txtColor:  243, 242, 240;
-      --txtBtnColor:  243, 242, 240;
-      --txtHover: 212, 0, 0;
-      --txtGray: 116, 116, 117;
-      --decorOColor: 212, 0, 0;
-      --decorVColor: 255, 255, 255;
-      --tooltipColor: 212, 0, 0;
-
-      --bgSvg: url(../images/bg2.svg);
-      --ArrowRightSvg: url(../images/ArrowRight.svg);
-      --ArrowDnSvg: url(../images/ArrowDn.svg);
-    }
-  </style> 
+  <div id="stylesContainer">
+    <style class="appTheme appTheme_light">
+      :root{
+        --bg: 243, 242, 240;
+        --bgLight: 231, 230, 228;
+        --txtColor:  1, 1, 1;
+        --txtBtnColor:  243, 242, 240;
+        --txtHover: 212, 0, 0;
+        --txtGray: 168, 167, 166;
+        --decorOColor: 255, 255, 255;
+        --decorVColor: 212, 0, 0;
+        --tooltipColor: 212, 0, 0;
+  
+        --bgSvg: url(../images/bg2_L.svg?v4);
+        --ArrowRightSvg: url(../images/ArrowRight_L.svg?v4);
+        --ArrowDnSvg: url(../images/ArrowDn_L.svg?v4);
+      }
+    </style>
+    <style class="appTheme appTheme_dark">
+      :root{
+        --bg: 35, 35, 38;
+        --bgLight: 56, 56, 58;
+        --txtColor:  243, 242, 240;
+        --txtBtnColor:  243, 242, 240;
+        --txtHover: 212, 0, 0;
+        --txtGray: 116, 116, 117;
+        --decorOColor: 212, 0, 0;
+        --decorVColor: 255, 255, 255;
+        --tooltipColor: 212, 0, 0;
+  
+        --bgSvg: url(../images/bg2.svg);
+        --ArrowRightSvg: url(../images/ArrowRight.svg);
+        --ArrowDnSvg: url(../images/ArrowDn.svg);
+      }
+    </style> 
+  </div>
   <script>
     function toggleStyle(){
-      let prev = document.getElementById("appver")
-      let elemArr = document.querySelectorAll('.appTheme');
-      let elem = elemArr[elemArr.length - 1];
-      elem.remove();
-      prev.after(elem);
-      // let elem = document.querySelector('#stylesContainer style');
-      // document.getElementById("stylesContainer").appendChild(elem);
+      // let prev = document.getElementById("appver")
+      // let elemArr = document.querySelectorAll('.appTheme');
+      // let elem = elemArr[elemArr.length - 1];
+      // elem.remove();
+      // prev.after(elem);
+      let elem = document.querySelector('#stylesContainer style');
+      document.getElementById("stylesContainer").appendChild(elem);
     }
+  </script>
+  <script>
     let tkey = false
     let tkeyControl = false;
     let tkeyShift = false;
