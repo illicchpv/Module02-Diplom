@@ -1,9 +1,10 @@
 # Дипломный проект - Portfolio. 
 ## Продвинутый курс 4.0
 ### По курсу Анна Блок Типичный верстальщик 
-на основе макета FIGMA: [enter link description here](https://www.figma.com/file/14O7Pt4umh2Xq7wkGOWD3k/portfolio)
 
-![enter image description here](https://illicchpv.github.io/Module02-Diplom/dist/images/preview.jpg)
+![выглядит примерно так](https://illicchpv.github.io/Module02-Diplom/dist/images/preview.jpg)
+
+на основе макета FIGMA: [макет](https://www.figma.com/file/14O7Pt4umh2Xq7wkGOWD3k/portfolio)
 
 ### Новые полезные навыки, приобретения.
 
