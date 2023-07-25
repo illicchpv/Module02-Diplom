@@ -316,7 +316,7 @@
             Александр Антропов
           </span>
           <span class="introduce__prof">
-            web-разработчик          
+            111web-разработчик          
           </span>
         </h1>
       </section>
@@ -982,7 +982,11 @@
     });
   }
   // if(false)
-  { // вставляем копии '<selector>' в места с data-copyContent='<selector>'
+  multyplyHtmlParts()
+
+  // размножение фрагментов HTML
+  function multyplyHtmlParts()  { 
+    // вставляем копии '<selector>' в места с data-copyContent='<selector>'
     // прмер: data-copyContent=".socials+ socials_burger decorO_burgerMenu vline_burgerMenu"
     //                           p1[+]        p2/-            [p3]                [pn] ...
     // вставить сюда(append) первый el из .socials 
@@ -1037,6 +1041,8 @@
     });
     targetArr.forEach(target => { target.append ? target.elem.appendChild(target.newClone) : target.elem.prepend(target.newClone); });
   }
+
+
   // for navigation
   function smoothScroll(params) {
     {
