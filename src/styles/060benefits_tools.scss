@@ -151,7 +151,7 @@
       content: "";
       position: absolute;
       border: 10px solid transparent;
-      border-bottom: 15px solid  rrgba(tooltipColor); //$tooltipColor;
+      border-bottom: 15px solid clr(tooltipColor); //  rrgba(tooltipColor); //$tooltipColor;
       left: 109px;
       top: -24px;
       z-index: -1;

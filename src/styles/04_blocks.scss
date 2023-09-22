@@ -2,7 +2,7 @@
 .decorO{
   width: 108px;
   height: 108px;
-  background-color: rrgba(decorOColor); // $decorOColor;
+  background-color: clr(decorOColor); // rrgba(decorOColor); // $decorOColor;
   border-radius: 50%;
   position: absolute;
   z-index: -1;
@@ -60,14 +60,14 @@
 .decorV{
   width: 253px;
   height: 253px;
-  background-color: rrgba(decorOColor); // $decorOColor;
+  background-color: clr(decorOColor); // rrgba(decorOColor); // $decorOColor;
   border-radius: 50%;
   position: relative;
   &:after{
     content: "";
     position: absolute;
     border: 30px solid transparent;
-    border-bottom: 70px solid rrgba(decorVColor); // $decorVColor;
+    border-bottom: 70px solid clr(decorVColor); // rrgba(decorVColor); // $decorVColor;
     top: 100px;
     left: 100px;
     left: -19px;

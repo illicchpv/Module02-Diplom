@@ -52,7 +52,7 @@
 
       &:after{
         border: 15px solid transparent;
-        border-bottom: 32px solid rrgba(decorVColor); // $decorVColor;
+        border-bottom: 32px solid clr(decorVColor); // rrgba(decorVColor); // $decorVColor;
         left: 148px;
         top: -12px;
       }
