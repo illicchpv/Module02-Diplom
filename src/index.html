@@ -91,7 +91,7 @@
     }
   </script>
   <script>
-    let tkey = false
+    let tkey = false;
     let tkeyControl = false;
     let tkeyShift = false;
     let tkeyAlt = false;
@@ -128,6 +128,13 @@
 
 </head>
 <body onkeydown="keyDown(event)" onkeyup="keyUp(event)">
+  <style>
+    :root{
+      --testBoxBorderClr: 122 123 0;
+      --testBoxBackgroundClr: 122 0 123;
+    }
+  </style>
+  <div class="testBox"></div>
 
   <!-- <div class="helper01" style="display:-none;">
     <a href="ui.html" target="_blank">ui.</a>

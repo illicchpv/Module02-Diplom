@@ -11,6 +11,10 @@ $propGlob: 0;
 @function rrgba($p, $o: 1) {
   @return rgba(var(--#{$p}), $o); // red($hex); //, green($hex), blue($hex);
 }
+@function clr($p, $o: 1) {
+  @return rgb(var(--#{$p}) / $o); // red($hex); //, green($hex), blue($hex);
+}
+
 @function rurl($p) {
   @return var(--#{$p}); // var(--ArrowRightSvg);
 }

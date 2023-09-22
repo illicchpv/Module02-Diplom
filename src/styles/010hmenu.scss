@@ -1,4 +1,15 @@
 // 01hmenu
+
+.testBox{
+  border: 20px solid rgb(var(--testBoxBorderClr) / 0.5);
+  background-color: clr(testBoxBackgroundClr, 0.5);
+  width: 50px;
+  height: 200px;
+  position: absolute;
+
+  display: none;
+}
+
 .hmenu {
   padding-top: 43px;
 
