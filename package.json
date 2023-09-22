@@ -16,8 +16,10 @@
     "webpack-dev-server": "^4.13.3"
   },
   "scripts": {
-    "build": "webpack",
-    "dev": "webpack serve --env develop"
+    "dev": "webpack serve --env develop",
+    "build-dev": "webpack --node-env=develop",
+    "build-prod": "webpack --node-env=production",
+    "clear": "rd /s /q dist"
   },
   "keywords": [],
   "author": "",
